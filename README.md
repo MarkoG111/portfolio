@@ -1,29 +1,42 @@
-# portfolio
+# 🧑‍💻 Personal Portfolio - Marko Gačanović
 
-This template should help get you started developing with Vue 3 in Vite.
+Modern and fully responsive **developer portfolio** built with **Vue 3 + Vite** and **Tailwind CSS**.  
+Showcases my projects, skills, experience, and contact information in a clean and visually engaging way.
 
-## Recommended IDE Setup
+Live version: _coming soon_
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+---
 
-## Customize configuration
+## ✨ Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- ⚡ **Vue 3 (Composition API)** with clean reusable components  
+- 🎨 **Tailwind CSS** for fast and scalable styling  
+- 🧭 Smooth scroll navigation with active-section tracking  
+- 📱 Fully responsive layout (mobile-first)  
+- 🖼 Animated project images with hover transitions  
+- 🔁 Reusable **ProjectCard** component powered by data array  
+- 💬 Contact form with validation  
+- 🧰 Modular file structure and maintainable codebase  
 
-## Project Setup
+---
 
-```sh
+## 🛠 Tech Stack
+
+- **Vue 3 + Vite**
+- **Tailwind CSS**
+- **JavaScript**
+- **Component-based architecture**
+
+---
+
+## 🚀 Getting Started
+
+1️⃣ Install dependencies
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+2️⃣ Run development server
+```bash
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```
