@@ -8,69 +8,106 @@
 
       <div class="form flex xs:flex-col md:flex-row md:w-[1350px]">
         <div class="mt-2 w-1/5">
-          <ul class="list-none ml-9">
-            <li class="relative my-6 md:text-xl xs:text-l"><a href="https://github.com/MarkoG111" target="_blank"
-                class="relative z-10 md:p-2 tracking-wider	text-black">GitHub</a></li>
-            <li class="relative my-6 md:text-xl xs:text-l"><a href="https://twitter.com/" target="_blank"
-                class="relative z-10 md:p-2 tracking-wider	text-black">Twitter</a></li>
-            <li class="relative my-6 md:text-xl xs:text-l"><a
-                href="https://www.linkedin.com/in/marko-ga%C4%8Danovi%C4%87-4a133016a/" target="_blank"
-                class="relative z-10 md:p-2 tracking-wider	text-black">LinkedIn</a></li>
+          <ul class="space-y-6">
+            <li>
+              <a href="https://github.com/MarkoG111" target="_blank" class="relative flex items-center gap-3 text-lg font-medium text-gray-900 tracking-wide 
+             transition-all duration-200 hover:text-white px-3 py-1
+             before:absolute before:top-0 before:left-0 before:h-full before:w-0
+             before:bg-gradient-to-r before:from-[#fa5441] before:to-[#3d0101]
+             before:-z-10 before:transition-all before:duration-300 hover:before:w-[50%]">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 .297a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.57v-2.02c-3.34.73-4.04-1.61-4.04-1.61A3.18 3.18 0 0 0 3.1 17.7c-1.09-.75.08-.74.08-.74a2.54 2.54 0 0 1 1.84 1.24 2.6 2.6 0 0 0 3.54 1 2.62 2.62 0 0 1 .78-1.63c-2.67-.31-5.47-1.34-5.47-5.95A4.66 4.66 0 0 1 6.06 7.2a4.3 4.3 0 0 1 .12-3.17s1-.32 3.3 1.23a11.38 11.38 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23a4.3 4.3 0 0 1 .12 3.17A4.66 4.66 0 0 1 19 11.37c0 4.63-2.81 5.62-5.49 5.92a2.94 2.94 0 0 1 .84 2.3V23.1c0 .31.21.68.82.57A12 12 0 0 0 12 .297Z" />
+                </svg>
+                GitHub
+              </a>
+            </li>
+
+            <!-- TWITTER -->
+            <li>
+              <a href="https://twitter.com/" target="_blank" class="relative flex items-center gap-3 text-lg font-medium text-gray-900 tracking-wide 
+             transition-all duration-200 hover:text-white px-3 py-1
+             before:absolute before:top-0 before:left-0 before:h-full before:w-0
+             before:bg-gradient-to-r before:from-[#fa5441] before:to-[#3d0101]
+             before:-z-10 before:transition-all before:duration-300 hover:before:w-[50%]">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 16.11 3c-2.63 0-4.77 2.14-4.77 4.77 0 .37.05.74.13 1.09C7.69 8.64 4.07 6.73 1.64 3.9A4.77 4.77 0 0 0 2.96 10a4.44 4.44 0 0 1-2.16-.6v.06a4.78 4.78 0 0 0 3.83 4.68c-.6.16-1.26.2-1.93.07a4.77 4.77 0 0 0 4.44 3.3A9 9 0 0 1 1 19.54a12.73 12.73 0 0 0 6.92 2.03c8.3 0 12.84-6.87 12.84-12.84 0-.2 0-.41-.02-.61A9.22 9.22 0 0 0 23 3Z" />
+                </svg>
+                Twitter
+              </a>
+            </li>
+
+            <!-- LINKEDIN -->
+            <li>
+              <a href="https://www.linkedin.com/in/marko-ga%C4%8Danovi%C4%87-4a133016a/" target="_blank" class="relative flex items-center gap-3 text-lg font-medium text-gray-900 tracking-wide 
+             transition-all duration-200 hover:text-white px-3 py-1
+             before:absolute before:top-0 before:left-0 before:h-full before:w-0
+             before:bg-gradient-to-r before:from-[#fa5441] before:to-[#3d0101]
+             before:-z-10 before:transition-all before:duration-300 hover:before:w-[50%]">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5a2.5 2.5 0 1 0 0 5.001 2.5 2.5 0 0 0 0-5zm-.02 7h4v12h-4v-12zm7 0h3.8v1.8h.1c.5-.9 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6v6.2h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.6h-4v-12z" />
+                </svg>
+                LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
 
         <div class="lg:w-4/5 xs:w-full">
-          <form action="" method="POST" class="form-contact" @submit.prevent="sendEmail">
-            <div class="relative z-0 xs:w-full md:w-80 lg:w-80 xxl:w-full mb-8 group">
-              <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full
-                Name</label>
-              <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                    <path
-                      d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
-                  </svg>
-                </div>
-                <input type="text" id="username" name="username" ref="username"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Johnny Doe" />
-              </div>
+          <form ref="contactForm" @submit.prevent="sendEmail">
+            <!-- USERNAME -->
+            <div class="mb-6">
+              <label class="block mb-2 text-sm font-medium text-gray-800">
+                Full Name
+              </label>
+
+              <input v-model="username" :class="[
+                'w-full p-4 rounded-lg border text-sm bg-gray-50 transition-all duration-200 focus:outline-none',
+                errors.username
+                  ? 'border-red-500 focus:ring-2 focus:ring-red-400'
+                  : 'border-gray-300 focus:ring-2 focus:ring-orange-400 focus:border-orange-400'
+              ]" placeholder="John Doe" />
+
+              <p v-if="errors.username" class="text-red font-medium text-sm mt-1">
+                {{ errors.username }}
+              </p>
             </div>
 
-            <div class="relative z-0 xs:w-full md:w-80 lg:w-80 xxl:w-full mb-8 group">
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                Email</label>
-              <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                    <path
-                      d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
-                    <path
-                      d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-                  </svg>
-                </div>
-                <input type="text" id="email" name="email" ref="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm p-4 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="name@gmail.com" />
-              </div>
+            <!-- EMAIL -->
+            <div class="mb-6">
+              <label class="block mb-2 text-sm font-medium text-gray-800">
+                Your Email
+              </label>
+
+              <input v-model="email" :class="[
+                'w-full p-4 rounded-lg border text-sm bg-gray-50 transition-all duration-200 focus:outline-none',
+                errors.email
+                  ? 'border-red-500 focus:ring-2 focus:ring-red-400'
+                  : 'border-gray-300 focus:ring-2 focus:ring-orange-400 focus:border-orange-400'
+              ]" placeholder="email@example.com" />
+
+              <p v-if="errors.email" class="text-red font-medium text-sm mt-1">
+                {{ errors.email }}
+              </p>
             </div>
 
-            <div class="relative z-0 xs:w-full md:w-80 lg:w-80 xxl:w-full mb-6 group mt-14">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                message</label>
-              <textarea id="message" rows="4" ref="message" name="message"
-                class="block p-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Leave a message..."></textarea>
+            <!-- MESSAGE -->
+            <div class="mb-6">
+              <label class="block mb-2 text-sm font-medium text-gray-800">
+                Your message
+              </label>
+
+              <textarea v-model="message" placeholder="Leave a message..." class="w-full h-32 p-4 rounded-lg border border-gray-300 text-sm bg-gray-50
+           focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400
+           transition-all duration-200 resize-none"></textarea>
             </div>
 
-            <div class="relative z-0 w-full mb-6 group">
-              <button type="submit" id="btnContact" name="btnContact"
-                class="bg-[#fa541c] text-white bg-color focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-7 p-4 text-center">
-                Send
-              </button>
-            </div>
+            <button class="bg-[#fa541c] text-white px-7 py-3 text-sm font-medium rounded-lg 
+         hover:bg-black transition-all duration-200">
+              Send
+            </button>
           </form>
         </div>
       </div>
@@ -82,144 +119,82 @@
   </div>
 </template>
 
-<style scoped>
-#contact ul li a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(90deg, rgb(250, 84, 65), #3d0101);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease-in, width 0.3s ease-in-out;
-}
-
-#contact ul li a:hover {
-  color: #fff;
-  box-shadow: inset 110px 0 0 0 transparent;
-}
-
-#contact ul li a:hover::before {
-  opacity: 1;
-  width: 100%;
-}
-
-#contact ul li::before {
-  content: "";
-  position: absolute;
-  height: 18px;
-  width: 6px;
-  background: linear-gradient(90deg, rgb(250, 84, 65), #3d0101);
-  top: 8px;
-  left: -24px;
-}
-
-#contact ul li::after {
-  content: "";
-  position: absolute;
-  height: 18px;
-  width: 6px;
-  background: linear-gradient(90deg, rgb(250, 84, 65), #3d0101);
-  top: 8px;
-  left: -24px;
-  transform: rotate(90deg);
-}
-
-.border-danger {
-  border: 1px solid red;
-}
-</style>
 
 <script setup>
-import emailjs from 'emailjs-com';
-import { ref } from 'vue';
+import { ref, reactive, onMounted } from "vue";
+import emailjs from "emailjs-com";
 
-document.addEventListener("DOMContentLoaded", function () {
-  let myFooter = document.getElementById("footer");
+// refs for input fields
+const username = ref("");
+const email = ref("");
+const message = ref("");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
-      myFooter.style.display = "block";
-    } else {
-      myFooter.style.display = "none";
-    }
-  });
+// ref for the form DOM element (required by emailjs.sendForm)
+const contactForm = ref(null);
+
+// reactive error object
+const errors = reactive({
+  username: null,
+  email: null,
 });
 
-const username = ref('');
-const email = ref('');
-const message = ref('');
+// simple validation rules
+const rules = {
+  username: {
+    regex: /^[A-Za-zČĆŽŠĐčćžšđ]+(?:[ -][A-Za-zČĆŽŠĐčćžšđ]+)*(?:[ -][A-Za-zČĆŽŠĐčćžšđ]+)?$/,
+    msg: "Eneter valid full name",
+  },
+  email: {
+    regex: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,10}$/,
+    msg: "Enter valid email",
+  },
+};
 
-function sendEmail() {
-  let errors = [];
+// validation function
+function validate() {
+  errors.username = !rules.username.regex.test(username.value)
+    ? rules.username.msg
+    : null;
 
-  const fields = [
-    {
-      ref: username,
-      regex: /^[A-Za-z][a-z]{1,19}(\s[A-Za-z][a-z]{1,19}){0,2}$/,
-      example: "John Doe"
-    },
-    {
-      ref: email,
-      regex: /^[A-Za-z\d\.-]+@[a-zA-Z]{2,10}\.[a-zA-Z]{2,20}$/,
-      example: "johnsmith@gmail.com"
-    }
-  ];
+  errors.email = !rules.email.regex.test(email.value)
+    ? rules.email.msg
+    : null;
 
-  fields.forEach(field => {
-    const inputValue = field.ref.value;
-
-    if (!field.regex.test(inputValue.value)) {
-      errors.push(field);
-    } else {
-      inputValue.classList.remove('border-danger')
-    }
-  });
-
-  if (errors.length > 0) {
-    const errorMessages = document.querySelectorAll('.text-red-check');
-    errorMessages.forEach(message => message.remove());
-
-    errors.forEach(error => {
-      const inputValue = error.ref.value;
-
-      if (inputValue) {
-        inputValue.classList.add('border', 'border-danger');
-        const errorMessage = document.createElement('div');
-
-        errorMessage.textContent = `Example: ${error.example}`;
-        errorMessage.classList.add('text-red-check', 'text-sm', 'mt-1', 'pb-3', 'text-red');
-
-        errorMessage.style.position = 'absolute';
-        errorMessage.style.top = '100%';
-
-        if (inputValue.parentElement) {
-          inputValue.parentElement.appendChild(errorMessage);
-        }
-      }
-
-      return false
-    });
-  } else {
-    const errorMessages = document.querySelectorAll('.text-red-check');
-    const form = document.querySelector(".form-contact");
-
-    errorMessages.forEach(message => message.remove());
-
-    emailjs.sendForm('service_sehuo4m', 'template_4qxo3jf', form, 'IEn0FnwWsRy4R8oT4').then((result) => {
-      alert("Email successfully sent!");
-
-      document.querySelector("#username").value = "";
-      document.querySelector("#email").value = "";
-      document.querySelector("#message").value = "";
-      console.log('SUCCESS!', result.text);
-    }, (error) => {
-      console.log('FAILED...', error.text);
-    });
-
-    return true
-  }
+  return !errors.username && !errors.email;
 }
+
+function resetForm() {
+  username.value = "";
+  email.value = "";
+  message.value = "";
+}
+
+// send email
+function sendEmail() {
+  if (!validate()) return;
+
+  emailjs.sendForm(
+    "service_sehuo4m",
+    "template_4qxo3jf",
+    contactForm.value,
+    "IEn0FnwWsRy4R8oT4"
+  )
+    .then(() => {
+      alert("Email successfully sent!");
+      resetForm();
+    })
+    .catch(err => console.error("FAILED:", err));
+}
+
+// footer visibility
+onMounted(() => {
+  const footer = document.getElementById("footer");
+
+  window.addEventListener("scroll", () => {
+    const reachedBottom =
+      window.scrollY + window.innerHeight >= document.body.scrollHeight;
+
+    footer.style.display = reachedBottom ? "block" : "none";
+  });
+});
 </script>
