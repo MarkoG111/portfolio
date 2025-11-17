@@ -10,7 +10,6 @@
 
       <nav class="flex justify-end items-center py-6 uppercase xl:mr-32">
         <ul class="md:flex hidden gap-6">
-
           <li v-for="item in navItems" :key="item.id" class="md:text-xl lg:text-xl">
             <a :class="{ activeLink: activeSection === item.id }" @click="scrollTo(item.id)">
               {{ item.label }}
@@ -57,136 +56,122 @@
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      active: false,
-      mobileNav: false,
-      activeSection: null,
-      isScrollingByClick: false,
-      scrollTimeout: null,
+<script setup>
+import { ref, onMounted } from "vue";
 
-      navItems: [
-        { id: "about", label: "About" },
-        { id: "experience", label: "Experience" },
-        { id: "skills", label: "Skills" },
-        { id: "projects", label: "Projects" },
-        { id: "contact", label: "Contact" },
-      ],
-    };
-  },
+const active = ref(false);
+const mobileNav = ref(false);
+const activeSection = ref(null);
+const isScrollingByClick = ref(false);
+const scrollTimeout = ref(null);
 
-  methods: {
-    toggleMobileNav() {
-      this.mobileNav = !this.mobileNav;
-    },
+const navItems = [
+  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
 
-    scrollTo(id) {
-      const sec = document.getElementById(id);
-      if (!sec) return;
+function toggleMobileNav() {
+  mobileNav.value = !mobileNav.value;
+}
 
-      this.isScrollingByClick = true;
-      this.activeSection = id;
+function scrollTo(id) {
+  const sec = document.getElementById(id);
+  if (!sec) return;
 
-      if (this.scrollTimeout) {
-        clearTimeout(this.scrollTimeout);
-      }
+  isScrollingByClick.value = true;
+  activeSection.value = id;
 
-      this.scrollTimeout = setTimeout(() => {
-        this.isScrollingByClick = false;
-      }, 1000);
+  if (scrollTimeout.value) clearTimeout(scrollTimeout.value);
 
-      window.scrollTo({
-        top: sec.offsetTop - 110,
-        behavior: "smooth",
-      });
+  scrollTimeout.value = setTimeout(() => {
+    isScrollingByClick.value = false;
+  }, 1000);
 
-      this.mobileNav = false;
-    },
+  window.scrollTo({
+    top: sec.offsetTop - 110,
+    behavior: "smooth",
+  });
 
-    // Detektuje trenutnu sekciju na osnovu scroll pozicije
-    detectActiveSection() {
-      if (this.isScrollingByClick) return;
+  mobileNav.value = false;
+}
 
-      const scrollPos = window.scrollY + 150;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+function detectActiveSection() {
+  if (isScrollingByClick.value) return;
 
-      // Ako smo skroz na vrhu
-      if (window.scrollY < 80) {
-        this.activeSection = null;
-        return;
-      }
+  const scrollPos = window.scrollY + 150;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
 
-      // Ako smo skoro na dnu stranice (zadnjih 100px), aktiviraj Contact
-      if (window.scrollY + windowHeight >= documentHeight - 100) {
-        this.activeSection = 'contact';
-        return;
-      }
+  if (window.scrollY < 80) {
+    activeSection.value = null;
+    return;
+  }
 
-      // Prolazi kroz sve sekcije i nalazi koja je trenutno u viewportu
-      for (let i = this.navItems.length - 1; i >= 0; i--) {
-        const section = document.getElementById(this.navItems[i].id);
-        if (section && section.offsetTop <= scrollPos) {
-          this.activeSection = this.navItems[i].id;
-          return;
-        }
-      }
-    },
+  if (window.scrollY + windowHeight >= documentHeight - 100) {
+    activeSection.value = "contact";
+    return;
+  }
 
-    initObserver() {
-      const options = {
-        root: null,
-        rootMargin: '-20% 0px -20% 0px', // Aktivira kad je sekcija između 20% od vrha/dna
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        if (this.isScrollingByClick) return;
-
-        let maxRatio = 0;
-        let mostVisibleSection = null;
-
-        entries.forEach((entry) => {
-          if (entry.intersectionRatio > maxRatio) {
-            maxRatio = entry.intersectionRatio;
-            mostVisibleSection = entry.target.id;
-          }
-        });
-
-        if (mostVisibleSection && maxRatio > 0.1) {
-          this.activeSection = mostVisibleSection;
-        }
-      }, options);
-
-      // Observuj sve sekcije
-      this.navItems.forEach((item) => {
-        const el = document.getElementById(item.id);
-        if (el) observer.observe(el);
-      });
+  for (let i = navItems.length - 1; i >= 0; i--) {
+    const section = document.getElementById(navItems[i].id);
+    if (section && section.offsetTop <= scrollPos) {
+      activeSection.value = navItems[i].id;
+      return;
     }
-  },
+  }
+}
 
-  mounted() {
-    const navbar = document.getElementById("nav");
+function initObserver() {
+  const options = {
+    root: null,
+    rootMargin: "-20% 0px -20% 0px",
+    threshold: Array.from({ length: 11 }, (_, i) => i / 10),
+  };
 
-    window.addEventListener("scroll", () => {
-      this.active = window.scrollY > navbar.offsetTop;
+  const observer = new IntersectionObserver((entries) => {
+    if (isScrollingByClick.value) return;
 
-      if (window.scrollY < 80) {
-        this.activeSection = null;
+    let maxRatio = 0;
+    let mostVisible = null;
+
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > maxRatio) {
+        maxRatio = entry.intersectionRatio;
+        mostVisible = entry.target.id;
       }
-
-      this.detectActiveSection();
     });
 
-    setTimeout(() => {
-      this.initObserver();
-    }, 500);
-  },
-};
+    if (mostVisible && maxRatio > 0.1) {
+      activeSection.value = mostVisible;
+    }
+  }, options);
+
+  navItems.forEach((item) => {
+    const el = document.getElementById(item.id);
+    if (el) observer.observe(el);
+  });
+}
+
+onMounted(() => {
+  const navbar = document.getElementById("nav");
+
+  window.addEventListener("scroll", () => {
+    active.value = window.scrollY > navbar.offsetTop;
+
+    if (window.scrollY < 80) {
+      activeSection.value = null;
+    }
+
+    detectActiveSection();
+  });
+
+  setTimeout(() => initObserver(), 500);
+});
 </script>
+
 
 <style scoped>
 .sticky-nav {
@@ -208,7 +193,8 @@ export default {
   width: 100% !important;
 }
 
-.mobile-nav a, nav a {
+.mobile-nav a,
+nav a {
   letter-spacing: 0.6px;
   color: #020202;
   margin: 0px -4px;
@@ -217,13 +203,15 @@ export default {
   z-index: 1;
 }
 
-.mobile-nav a:hover, nav a:hover {
+.mobile-nav a:hover,
+nav a:hover {
   color: white;
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.mobile-nav a::before, nav a::before {
+.mobile-nav a::before,
+nav a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -236,7 +224,8 @@ export default {
   transition: opacity 0.3s ease-in, width 0.3s ease-in-out;
 }
 
-.mobile-nav a:hover::before, nav a:hover::before {
+.mobile-nav a:hover::before,
+nav a:hover::before {
   opacity: 1;
   width: 100%;
 }
