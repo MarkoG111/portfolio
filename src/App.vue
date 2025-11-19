@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen font-Onest">
     <div id="nav">
-      <SiteNavigation />
+      <SiteNavigation ref="siteNavigation" />
     </div>
     <HomeHero />
     <AboutView />
@@ -32,7 +32,8 @@ import ContactView from "./views/ContactView.vue";
   z-index: 9999;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
 }
 </style>
