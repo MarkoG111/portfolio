@@ -2,12 +2,12 @@
   <SiteNavigation ref="siteNavigation" />
 
   <div class="bg-[#FA5441] overflow-hidden">
-    <div class="container flex xs:flex-col md:flex-row md:mt-32 xs:mt-20 fade-in">
+    <div class="container flex flex-col md:flex-row mt-20 md:mt-32 fade-in">
+
       <!-- TEXT BLOCK -->
       <div class="md:pt-7 lg:pt-36 xs:pt-14 md:text-left xs:text-center">
 
-        <!-- IME -->
-        <h1 class="md:text-6xl xs:text-4xl font-bold leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
           Marko Gačanović
         </h1>
 
@@ -46,14 +46,23 @@
 
 <script>
 import SiteNavigation from '@/components/SiteNavigation.vue';
+import { ref } from 'vue';
+
+const siteNavigation = ref(null);
 
 export default {
   components: { SiteNavigation },
-  methods: {
-    scrollToSection(section) {
-      this.$refs.siteNavigation.scrollTo(section);
+  setup() {
+    const siteNavigation = ref(null);
+
+    function scrollToSection(section) {
+      if (siteNavigation.value) {
+        siteNavigation.value.scrollTo(section);
+      }
     }
-  },
+
+    return { siteNavigation, scrollToSection };
+  }
 };
 </script>
 
