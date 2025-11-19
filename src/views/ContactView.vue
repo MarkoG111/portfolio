@@ -1,12 +1,12 @@
 <template>
   <div class="mb-20 mt-10 container flex">
-    <div id="contact" class="sm:container">
-      <div class="contact-heading">
-        <h2 class="text-red md:text-3xl xs:text-2xl uppercase">Contact</h2>
-        <h3 class="text-red uppercase mt-4 md:text-xl xs:text-l">Let's get in touch</h3>
+    <div id="contact" class="container mx-auto px-4 pb-6">
+      <div class="contact-heading  md:text-left">
+        <h2 class="text-red text-2xl md:text-3xl uppercase">Contact</h2>
+        <h3 class="text-red uppercase mt-4 text-lg md:text-xl">Let's get in touch</h3>
       </div>
 
-      <div class="form flex xs:flex-col md:flex-row md:w-[1350px]">
+      <div class="form flex flex-col md:flex-row mt-10 gap-10">
         <div class="mt-2 w-1/5">
           <ul class="space-y-6">
             <li>
