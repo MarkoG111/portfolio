@@ -59,6 +59,10 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
+defineExpose({
+  scrollTo
+});
+
 const active = ref(false);
 const mobileNav = ref(false);
 const activeSection = ref(null);
