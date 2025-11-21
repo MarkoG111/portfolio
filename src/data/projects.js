@@ -80,7 +80,7 @@ export const projects = [
         stack: ["JavaScript / jQuery", "AJAX", "JSON"],
         image: "/images/projects/township-gornji-milanovac.png",
         github: "https://github.com/MarkoG111/gornji_milanovac",
-        demo: "#",
+        demo: "https://gornjimilanovac.vercel.app/",
         reverse: false,
         hoverOffset: 50
     },
@@ -97,8 +97,9 @@ export const projects = [
         stack: ["HTML", "CSS", "SEO"],
         image: "/images/projects/k2-elite.png",
         github: "https://github.com/MarkoG111/k2_elite",
-        demo: "#",
+        demo: "https://k2elite.vercel.app/",
         reverse: true,
         hoverOffset: 40
     },
 ];
+
