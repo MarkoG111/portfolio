@@ -29,7 +29,7 @@ export const projects = [
         stack: ["JavaScript / jQuery", "Laravel", "MySQL", "AJAX", "Bootstrap 4"],
         image: "/images/projects/gacanovic-academy.png",
         github: "https://github.com/MarkoG111/gacanovic_academy",
-        demo: "#",
+        demo: "https://gacanovic-academy.infinityfree.me/",
         reverse: true,
         hoverOffset: 60
     },
@@ -48,7 +48,7 @@ export const projects = [
         stack: ["JavaScript / jQuery", "PHP", "OOP", "MVC Architecture", "MySQL", "AJAX", "Bootstrap 4"],
         image: "/images/projects/skoda.png",
         github: "https://github.com/MarkoG111/skoda_rental",
-        demo: "#",
+        demo: "https://skoda-rental.infinityfree.me/",
         reverse: false,
         hoverOffset: 60
     },
@@ -65,7 +65,7 @@ export const projects = [
         stack: ["JavaScript / jQuery", "PHP", "MySQL", "AJAX", "Bootstrap 4"],
         image: "/images/projects/gigatronic-shop.png",
         github: "https://github.com/MarkoG111/gigatronic_shop",
-        demo: "#",
+        demo: "https://gigatronic-shop.infinityfree.me/",
         reverse: true,
         hoverOffset: 60
     },
@@ -102,4 +102,5 @@ export const projects = [
         hoverOffset: 40
     },
 ];
+
 
