@@ -3,7 +3,7 @@
 Modern and fully responsive **developer portfolio** built with **Vue 3 + Vite** and **Tailwind CSS**.  
 Showcases my projects, skills, experience, and contact information in a clean and visually engaging way.
 
-Live version: _coming soon_
+Live version: https://portfolio-gacho.vercel.app/
 
 ---
 
