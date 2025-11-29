@@ -12,7 +12,7 @@ export const projects = [
         stack: ["React / Redux", "ASP.NET Core", "MSSQL Server", "Tailwind CSS"],
         image: "/images/projects/marko-blog.png",
         github: "https://github.com/MarkoG111/marko_blog",
-        demo: "#",
+        demo: "https://marko-blog.vercel.app/",
         reverse: false,
         hoverOffset: 55
     },
@@ -102,5 +102,6 @@ export const projects = [
         hoverOffset: 40
     },
 ];
+
 
 
