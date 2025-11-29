@@ -18,7 +18,7 @@
 
           <span class="md:mt-7 lg:mt-0">|</span>
           <li class="md:text-xl lg:text-xl">
-            <a href="https://marko-blog.vercel.app/">Blog</a>
+            <a href="https://marko-blog.vercel.app/" target="_blank">Blog</a>
           </li>
         </ul>
 
@@ -47,7 +47,7 @@
           </li>
 
           <li class="text-2xl py-2.5 font-semibold">
-            <a href="https://marko-blog.vercel.app/">Blog</a>
+            <a href="https://marko-blog.vercel.app/" target="_blank">Blog</a>
           </li>
         </ul>
       </div>
@@ -271,4 +271,5 @@ nav a:hover::before {
   }
 }
 </style>
+
 
