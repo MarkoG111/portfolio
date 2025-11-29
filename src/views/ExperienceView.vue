@@ -13,7 +13,7 @@
               @click="toggleArrow('OTA Sync')" :class="{ 'title-color': selectedTitle === 'OTA Sync' }">
               <div class="title md:text-xl xs:text-l">
                 <i :class="{ 'fas fa-hand-point-right mr-2': selectedTitle === 'OTA Sync' }"></i>
-                <span class="md:font-normal text-2xl">OTA Sync</span>
+                <span class="md:font-normal md:text-2xl">OTA Sync</span>
                 <div class="left-before"></div>
                 <div :class="{ arrow: selectedTitle === 'OTA Sync' }"></div>
               </div>
@@ -23,7 +23,7 @@
               @click="toggleArrow('Frontmen Studio')" :class="{ 'title-color': selectedTitle === 'Frontmen Studio' }">
               <div class="title md:text-xl xs:text-l">
                 <i :class="{ 'fas fa-hand-point-right mr-2': selectedTitle === 'Frontmen Studio' }"></i>
-                <span class="md:font-normal text-2xl">Frontmen Studio</span>
+                <span class="md:font-normal md:text-2xl">Frontmen Studio</span>
                 <div class="left-before"></div>
                 <div :class="{ arrow: selectedTitle === 'Frontmen Studio' }"></div>
               </div>
