@@ -1,6 +1,19 @@
 export const projects = [
     {
         id: 1,
+        title: "Renegade Urban Winery",
+        date: "February 2026",
+        description: `Renegade Urban Winery is a WordPress-based event and e-commerce platform built for managing winery events and online ticket sales. The system allows visitors to explore upcoming wine tastings, book seats, and receive automatically generated PDF tickets with QR verification.
+        The platform integrates WooCommerce for payments, a custom ticket generation system, and a QR-based validation page used during events to verify ticket authenticity and prevent reuse. The project also includes automated email delivery with ticket attachments and a structured event management workflow.`,
+        stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "Elementor", "QR Code Generation"],
+        image: "/images/projects/renegade-urban-winery.png",
+        github: "https://github.com/MarkoG111/marko_blog",
+        demo: "https://marko-blog.vercel.app/",
+        reverse: true,
+        hoverOffset: 55
+    },
+    {
+        id: 2,
         title: "Marko's Blog",
         date: "March 2025",
         description: `<b>Marko’s Blog</b> is a full-stack blogging platform built with <b>ASP.NET Core</b> and <b>React</b>.
@@ -17,7 +30,7 @@ export const projects = [
         hoverOffset: 55
     },
     {
-        id: 2,
+        id: 3,
         title: "Gačanović Academy",
         date: "April 2021",
         description: ` <strong>Gačanović Academy</strong> is an online learning platform built with
@@ -34,7 +47,7 @@ export const projects = [
         hoverOffset: 60
     },
     {
-        id: 3,
+        id: 4,
         title: "Škoda Rental",
         date: "July 2020",
         description: `<strong>Škoda Rental</strong> is a dynamic car rental platform built with
@@ -53,7 +66,7 @@ export const projects = [
         hoverOffset: 60
     },
     {
-        id: 4,
+        id: 5,
         title: "Gigatronic Shop",
         date: "March 2020",
         description: `<strong>Gigatronic Shop</strong> is a full-featured <strong>eCommerce platform</strong> designed to
@@ -70,7 +83,7 @@ export const projects = [
         hoverOffset: 60
     },
     {
-        id: 5,
+        id: 6,
         title: "Gornji Milanovac",
         date: "February 2019",
         description: `The <strong>Gornji Milanovac</strong> website is a <strong>modern single-page presentation</strong>
@@ -85,7 +98,7 @@ export const projects = [
         hoverOffset: 50
     },
     {
-        id: 6,
+        id: 7,
         title: "K2 Elite",
         date: "March 2018",
         description: `K2 Elite is my first web project, a <strong>simple presentation</strong> website built exclusively in
