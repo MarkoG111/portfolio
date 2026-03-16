@@ -3,14 +3,14 @@ export const projects = [
         id: 1,
         title: "Renegade Urban Winery",
         date: "February 2026",
-        description: `Renegade Urban Winery is a <b>WordPress</b>-based event and e-commerce platform built for managing winery events and online ticket sales. The system allows visitors to explore upcoming wine tastings, book seats, and receive automatically generated <b>PDF tickets</b> with <b>QR verification</b>.
+        description: `<b>Renegade Urban Winery</b> is a <b>WordPress</b>-based event and e-commerce platform built for managing winery events and online ticket sales. The system allows visitors to explore upcoming wine tastings, book seats, and receive automatically generated <b>PDF tickets</b> with <b>QR verification</b>.
         The platform integrates <b>WooCommerce</b> for payments, a custom ticket generation system, and a QR-based validation page used during events to verify ticket authenticity and prevent reuse. The project also includes automated email delivery with ticket attachments and a structured event management workflow.`,
         stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "Elementor"],
         image: "/images/projects/renegade-urban-winery.png",
         github: "https://github.com/MarkoG111/marko_blog",
         demo: "https://marko-blog.vercel.app/",
         reverse: true,
-        hoverOffset: 75
+        hoverOffset: 70
     },
     {
         id: 2,
