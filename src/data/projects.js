@@ -7,8 +7,8 @@ export const projects = [
         The platform integrates <b>WooCommerce</b> for payments, a custom ticket generation system, and a QR-based validation page used during events to verify ticket authenticity and prevent reuse. The project also includes automated email delivery with ticket attachments and a structured event management workflow.`,
         stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "Elementor"],
         image: "/images/projects/renegade-urban-winery.png",
-        github: "https://github.com/MarkoG111/marko_blog",
-        demo: "https://marko-blog.vercel.app/",
+        github: "https://github.com/MarkoG111/renegade_urban_winery",
+        demo: "https://renegade-winary.infinityfreeapp.com/",
         reverse: true,
         hoverOffset: 70
     },
