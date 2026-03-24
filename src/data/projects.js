@@ -21,7 +21,7 @@ export const projects = [
                 The project follows <b>Clean Architecture</b> and <b>SOLID</b> principles, reflecting my focus on
                 building scalable,
                 secure, and maintainable software solutions.`,
-        stack: ["React / Redux", "ASP.NET Core", "MSSQL Server", "Tailwind CSS"],
+        stack: ["React / Redux", "ASP.NET Core", "SQL", "Tailwind CSS"],
         image: "/images/projects/marko-blog.png",
         github: "https://github.com/MarkoG111/marko_blog",
         demo: "https://marko-blog.vercel.app/",

@@ -26,7 +26,7 @@ defineProps({
         <!-- TEXT -->
         <div class="flex flex-col items-center justify-center text-center md:w-1/2">
             <h3 class=" text-[#2d2e32] font-bold xs:text-m lg:text-1xl mb-2 flex items-center justify-center gap-3.2px">
-                {{ title }} 
+                {{ title }}
                 <span class="font-normal xs:text-m lg:text-l">&nbsp; ({{ date }}) </span>
             </h3>
 
