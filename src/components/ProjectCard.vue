@@ -25,12 +25,12 @@ defineProps({
 
         <!-- TEXT -->
         <div class="flex flex-col items-center justify-center text-center md:w-1/2">
-            <h3 class=" text-[#2d2e32] font-bold xs:text-m lg:text-1xl mb-2 flex items-center justify-center gap-3.2px">
+            <h3 class=" text-[#2b2c2e] font-bold xs:text-m lg:text-1xl mb-2 flex items-center justify-center gap-3.2px">
                 {{ title }}
                 <span class="font-normal xs:text-m lg:text-l">&nbsp; ({{ date }}) </span>
             </h3>
 
-            <p class="text-[#767676] xs:text-m lg:text-l font-semibold lg:mr-8 text-justify leading-relaxed"
+            <p class="text-[#3b3b3b] xs:text-m lg:text-l  lg:mr-8 text-justify leading-relaxed"
                 v-html="description">
             </p>
 

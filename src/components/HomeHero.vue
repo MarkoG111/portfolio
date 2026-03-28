@@ -18,7 +18,7 @@
 
         <!-- SIGNATURE PORUKA -->
         <p class="md:text-xl xs:text-base md:mt-5 xs:mt-4 max-w-lg text-black/90 md:leading-relaxed xs:leading-snug">
-          Building scalable web platforms, automation workflows & data-driven systems.
+          I build complex web applications with real-time synchronization, API integrations, and automation systems.
         </p>
 
         <!-- DUGMIĆI -->

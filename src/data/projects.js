@@ -3,7 +3,7 @@ export const projects = [
         id: 1,
         title: "Renegade Urban Winery",
         date: "February 2026",
-        description: `Renegade Urban Winery is a custom-built event ticketing system that extends WooCommerce into a full event management platform. It handles ticket generation, seat allocation, and secure QR-based validation with HMAC hashing to prevent fraud and duplicate usage. The system includes automated PDF ticket delivery, real-time check-in tracking, and a custom admin dashboard for managing events and ticket lifecycle.`,
+        description: `Renegade Urban Winery is a <b>custom-built event ticketing system</b> that extends WooCommerce into a full event management platform. It solves the problem of <b>online event ticket reservations and payments</b> by integrating a secure checkout flow using <b>Stripe</b>. The system handles <b>ticket generation</b>, <b>seat allocation</b>, and secure <b>QR code validation</b> with <b>HMAC hashing</b> to prevent fraud and duplicate usage. It also includes <b>automated PDF ticket delivery</b>, <b>real-time check-in tracking</b>, and a <b>custom admin dashboard</b> for managing events and the full ticket lifecycle.`,
         stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "Elementor"],
         image: "/images/projects/renegade-urban-winery.png",
         github: "https://github.com/MarkoG111/renegade_urban_winery",
