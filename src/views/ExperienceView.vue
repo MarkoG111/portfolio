@@ -44,38 +44,36 @@
                 </p>
               </div>
               <div>
-                <ul class="list-disc ml-5 mt-4 space-y-4 leading-[1.8]">
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
-                    Developed and maintained slot games such as:
-                    <span class="font-semibold">Dino Zone</span>, <span class="font-semibold">Moonlight Wolves</span>, <span class="font-semibold">Silk Road Riches</span>,
-                    <span class="font-semibold">Super Stack A Cat</span>, <span class="font-semibold">Fortune Teller 6</span>,
-                    <span class="font-semibold">Aztec Blox</span>, and <span class="font-semibold">Wild West Zone</span>.
-                  </li>
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
-                    Implemented and stabilized <span class="font-semibold">core game features</span>
-                    (<em>re-spins</em>, <em>free spins</em>, <em>turbo modes</em>, <em>auto-play</em>,
-                    <em>bonus multipliers</em>) using <span class="font-semibold">JavaScript (ES6+)</span>, <span class="font-semibold">Pixi.js</span>,
-                    and <span class="font-semibold">GSAP/TweenMax</span>.
-                  </li>
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
-                    Synchronized <span class="font-semibold">animations</span> and <span class="font-semibold">sound effects</span> with
-                    <span class="font-semibold">server-side outcomes</span> via a custom <span class="font-semibold">communication service layer</span>.
-                  </li>
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
-                    <span class="font-semibold">Optimized rendering performance</span>, reduced <span class="font-semibold">frame drops</span>,
-                    and ensured <span class="font-semibold">cross-browser</span> and <span class="font-semibold">cross-device compatibility</span>.
-                  </li>
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
-                    Fixed complex <span class="font-semibold">production bugs</span> (<em>timing issues</em>, <em>animation layering</em>,
-                    <em>turbo delay</em>, <em>negative autoplay values</em>) under
-                    <span class="font-semibold">tight release deadlines</span>.
-                  </li>
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
-                    Contributed to <span class="font-semibold">localization</span> for regulated markets
-                    (<span class="font-semibold">DE</span>, <span class="font-semibold">ES</span>, <span class="font-semibold">UK</span>), ensuring
-                    <span class="font-semibold">compliance</span> and <span class="font-semibold">stability</span> during integration
-                    with the <span class="font-semibold">Leander platform</span>.
-                  </li>
+                <ul class="list-disc ml-5 mt-4 space-y-3 leading-[1.7]">
+                    <li class="p-2 rounded-lg border border-gray-100">
+                        <span class="font-semibold text-red">Built and maintained slot games:</span>
+                        Dino Zone, Moonlight Wolves, Silk Road Riches, Super Stack A Cat, Fortune Teller 6, Aztec Blox, Wild West Zone.
+                    </li>
+
+                    <li class="p-2 rounded-lg border border-gray-100">
+                        <span class="font-semibold text-red">Implemented game mechanics:</span>
+                        Re-spins, free spins, turbo mode, auto-play, and bonus multipliers using JavaScript (ES6+), Pixi.js, and GSAP.
+                    </li>
+
+                    <li class="p-2 rounded-lg border border-gray-100">
+                        <span class="font-semibold text-red">Synced gameplay systems:</span>
+                        Coordinated animations and sound with server-driven outcomes via a custom communication layer.
+                    </li>
+
+                    <li class="p-2 rounded-lg border border-gray-100">
+                        <span class="font-semibold text-red">Optimized performance:</span>
+                        Reduced frame drops and ensured smooth cross-browser and cross-device gameplay.
+                    </li>
+
+                    <li class="p-2 rounded-lg border border-gray-100">
+                        <span class="font-semibold text-red">Resolved production issues:</span>
+                        Fixed timing bugs, animation layering conflicts, turbo delays, and invalid autoplay states under tight deadlines.
+                    </li>
+
+                    <li class="p-2 rounded-lg border border-gray-100">
+                        <span class="font-semibold text-red">Handled localization & compliance:</span>
+                        Delivered stable integrations for DE, ES, and UK markets on the Leander platform.
+                    </li>
                 </ul>
               </div>
             </div>
@@ -97,7 +95,7 @@
               </div>
               <div>
                 <ul class="list-disc ml-5 mt-4 space-y-4 leading-[1.8]">
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                     <span class="font-semibold text-red">OpenGDS Integration:</span> Implemented full data exchange between the PMS and the
                     <span class="font-semibold">OpenGDS network</span> for hotels, rooms, pricing, and reservations.
                     Designed mapping tables (<em>gds_properties</em>, <em>gds_room_types</em>,
@@ -108,7 +106,7 @@
                     real-time push updates.
                   </li>
 
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                     <span class="font-semibold text-red">Expenses Module:</span> Developed a complete <span class="font-semibold">Expense Management system</span> supporting
                     both
                     manual and recurring (daily, monthly, yearly) expenses. Integrated <span class="fontspanibold">cron jobs</span> for
@@ -117,26 +115,26 @@
                     filtering options.
                   </li>
 
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                     <span class="font-semibold text-red">Reports and Automated Emails:</span> Built a system for <span class="font-semibold">automated report generation</span>
                     and
                     <span class="font-semibold">email distribution</span> (Lost & Found, expenses, reservations, performance stats).
                     Created <span class="font-semibold">customizable email templates</span> and scheduling logic for automatic delivery.
                   </li>
 
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                     <span class="font-semibold text-red">Minimax Integration:</span> Integrated PMS data with <span class="font-semibold">Minimax accounting software</span>,
                     enabling
                     automatic export of invoices and financial data to streamline bookkeeping and reduce manual work.
                   </li>
 
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                     <span class="font-semibold text-red">PriceLabs API Integration:</span> Connected the PMS pricing engine with the
                     <span class="font-semibold">PriceLabs API</span> for automatic synchronization of room rates and restrictions using
                     <span class="font-semibold">dynamic pricing algorithms</span>.
                   </li>
 
-                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                     <span class="font-semibold text-red">Web Scraping Automation:</span> Built <span class="font-semibold">data-scraping pipelines</span> for importing hotel
                     and room
                     details directly from <span class="font-semibold">Booking.com</span> and <span class="font-semibold">Airbnb</span>, reducing onboarding
