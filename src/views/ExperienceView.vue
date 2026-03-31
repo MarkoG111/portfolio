@@ -35,46 +35,46 @@
                 <p class="italic">September 2021 - November 2022</p>
               </div>
               <div>
-                <p class="leading-relaxed mt-3">
-                  Developed and maintained multiple <strong>browser-based casino slot games</strong>, focusing on
-                  <strong>graphics</strong>, <strong>animation</strong>, <strong>game logic</strong>, and
-                  <strong>performance optimization</strong>. Collaborated closely with
-                  <strong>designers</strong> and <strong>backend engineers</strong> to deliver visually consistent and
+                <p class="leading-[1.8] space-y-4 mt-3">
+                  Developed and maintained multiple <span class="font-semibold">browser-based casino slot games</span>, focusing on
+                  <span class="font-semibold">graphics</span>, <span class="font-semibold">animation</span>, <span class="font-semibold">game logic</span>, and
+                  <span class="font-semibold">performance optimization</span>. Collaborated closely with
+                  <span class="font-semibold">designers</span> and <span class="font-semibold">backend engineers</span> to deliver visually consistent and
                   stable gameplay experiences.
                 </p>
               </div>
               <div>
-                <ul class="list-disc ml-5 mt-4 leading-relaxed">
-                  <li>
-                    Developed and maintained slot games such as
-                    <strong>Dino Zone</strong>, <strong>Moonlight Wolves</strong>, <strong>Silk Road Riches</strong>,
-                    <strong>Super Stack A Cat</strong>, <strong>Fortune Teller 6</strong>,
-                    <strong>Aztec Blox</strong>, and <strong>Wild West Zone</strong>.
+                <ul class="list-disc ml-5 mt-4 space-y-4 leading-[1.8]">
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    Developed and maintained slot games such as:
+                    <span class="font-semibold">Dino Zone</span>, <span class="font-semibold">Moonlight Wolves</span>, <span class="font-semibold">Silk Road Riches</span>,
+                    <span class="font-semibold">Super Stack A Cat</span>, <span class="font-semibold">Fortune Teller 6</span>,
+                    <span class="font-semibold">Aztec Blox</span>, and <span class="font-semibold">Wild West Zone</span>.
                   </li>
-                  <li>
-                    Implemented and stabilized <strong>core game features</strong>
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    Implemented and stabilized <span class="font-semibold">core game features</span>
                     (<em>re-spins</em>, <em>free spins</em>, <em>turbo modes</em>, <em>auto-play</em>,
-                    <em>bonus multipliers</em>) using <strong>JavaScript (ES6+)</strong>, <strong>Pixi.js</strong>,
-                    and <strong>GSAP/TweenMax</strong>.
+                    <em>bonus multipliers</em>) using <span class="font-semibold">JavaScript (ES6+)</span>, <span class="font-semibold">Pixi.js</span>,
+                    and <span class="font-semibold">GSAP/TweenMax</span>.
                   </li>
-                  <li>
-                    Synchronized <strong>animations</strong> and <strong>sound effects</strong> with
-                    <strong>server-side outcomes</strong> via a custom <strong>communication service layer</strong>.
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    Synchronized <span class="font-semibold">animations</span> and <span class="font-semibold">sound effects</span> with
+                    <span class="font-semibold">server-side outcomes</span> via a custom <span class="font-semibold">communication service layer</span>.
                   </li>
-                  <li>
-                    <strong>Optimized rendering performance</strong>, reduced <strong>frame drops</strong>,
-                    and ensured <strong>cross-browser</strong> and <strong>cross-device compatibility</strong>.
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="font-semibold">Optimized rendering performance</span>, reduced <span class="font-semibold">frame drops</span>,
+                    and ensured <span class="font-semibold">cross-browser</span> and <span class="font-semibold">cross-device compatibility</span>.
                   </li>
-                  <li>
-                    Fixed complex <strong>production bugs</strong> (<em>timing issues</em>, <em>animation layering</em>,
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    Fixed complex <span class="font-semibold">production bugs</span> (<em>timing issues</em>, <em>animation layering</em>,
                     <em>turbo delay</em>, <em>negative autoplay values</em>) under
-                    <strong>tight release deadlines</strong>.
+                    <span class="font-semibold">tight release deadlines</span>.
                   </li>
-                  <li>
-                    Contributed to <strong>localization</strong> for regulated markets
-                    (<strong>DE</strong>, <strong>ES</strong>, <strong>UK</strong>), ensuring
-                    <strong>compliance</strong> and <strong>stability</strong> during integration
-                    with the <strong>Leander platform</strong>.
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    Contributed to <span class="font-semibold">localization</span> for regulated markets
+                    (<span class="font-semibold">DE</span>, <span class="font-semibold">ES</span>, <span class="font-semibold">UK</span>), ensuring
+                    <span class="font-semibold">compliance</span> and <span class="font-semibold">stability</span> during integration
+                    with the <span class="font-semibold">Leander platform</span>.
                   </li>
                 </ul>
               </div>
@@ -84,64 +84,64 @@
                 <p class="italic">November 2022 - January 2024</p>
               </div>
               <div>
-                <p class="leading-relaxed mt-3">
-                  Worked on the development of an advanced <strong>Property Management System (PMS)</strong> and
-                  <strong>Channel Management platform</strong> for hotels and apartments, enabling property owners to
-                  synchronize data across multiple <strong>Online Travel Agencies (OTAs)</strong>.
-                  Responsible for <strong>API integrations</strong>, <strong>automated reporting</strong>, and the
+                <p class="leading-[1.8] space-y-4 mt-3">
+                  Worked on the development of an advanced <span class="font-semibold">Property Management System (PMS)</span> and
+                  <span class="font-semibold">Channel Management platform</span> for hotels and apartments, enabling property owners to
+                  synchronize data across multiple <span class="font-semibold">Online Travel Agencies (OTAs)</span>.
+                  Responsible for <span class="font-semibold">API integrations</span>, <span class="font-semibold">automated reporting</span>, and the
                   development of
-                  complex internal modules, including <strong>reservation management</strong>, <strong>room
-                    availability</strong>,
-                  and <strong>guest invoicing</strong>.
+                  complex internal modules, including <span class="font-semibold">reservation management</span>, <span class="font-semibold">room
+                    availability</span>,
+                  and <span class="font-semibold">guest invoicing</span>.
                 </p>
               </div>
               <div>
-                <ul class="list-disc ml-5 mt-4 leading-relaxed">
-                  <li>
-                    <b>OpenGDS Integration:</b> Implemented full data exchange between the PMS and the
-                    <strong>OpenGDS network</strong> for hotels, rooms, pricing, and reservations.
+                <ul class="list-disc ml-5 mt-4 space-y-4 leading-[1.8]">
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="font-semibold text-red">OpenGDS Integration:</span> Implemented full data exchange between the PMS and the
+                    <span class="font-semibold">OpenGDS network</span> for hotels, rooms, pricing, and reservations.
                     Designed mapping tables (<em>gds_properties</em>, <em>gds_room_types</em>,
                     <em>gds_pricing_plans</em>) to link
                     internal PMS IDs with external GDS IDs, ensuring reliable synchronization.
-                    Built <strong>PHP cURL connectors</strong> for data import/export and <strong>webhook
-                      handlers</strong> for
+                    Built <span class="font-semibold">PHP cURL connectors</span> for data import/export and <span class="font-semibold">webhook
+                      handlers</span> for
                     real-time push updates.
                   </li>
 
-                  <li>
-                    <b>Expenses Module:</b> Developed a complete <strong>Expense Management system</strong> supporting
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="font-semibold text-red">Expenses Module:</span> Developed a complete <span class="font-semibold">Expense Management system</span> supporting
                     both
-                    manual and recurring (daily, monthly, yearly) expenses. Integrated <strong>cron jobs</strong> for
+                    manual and recurring (daily, monthly, yearly) expenses. Integrated <span class="fontspanibold">cron jobs</span> for
                     automatic
-                    generation of recurring entries, along with <strong>PDF/Excel exports</strong> and advanced
+                    generation of recurring entries, along with <span class="font-semibold">PDF/Excel exports</span> and advanced
                     filtering options.
                   </li>
 
-                  <li>
-                    <b>Reports and Automated Emails:</b> Built a system for <strong>automated report generation</strong>
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="font-semibold text-red">Reports and Automated Emails:</span> Built a system for <span class="font-semibold">automated report generation</span>
                     and
-                    <strong>email distribution</strong> (Lost & Found, expenses, reservations, performance stats).
-                    Created <strong>customizable email templates</strong> and scheduling logic for automatic delivery.
+                    <span class="font-semibold">email distribution</span> (Lost & Found, expenses, reservations, performance stats).
+                    Created <span class="font-semibold">customizable email templates</span> and scheduling logic for automatic delivery.
                   </li>
 
-                  <li>
-                    <b>Minimax Integration:</b> Integrated PMS data with <strong>Minimax accounting software</strong>,
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="font-semibold text-red">Minimax Integration:</span> Integrated PMS data with <span class="font-semibold">Minimax accounting software</span>,
                     enabling
                     automatic export of invoices and financial data to streamline bookkeeping and reduce manual work.
                   </li>
 
-                  <li>
-                    <b>PriceLabs API Integration:</b> Connected the PMS pricing engine with the
-                    <strong>PriceLabs API</strong> for automatic synchronization of room rates and restrictions using
-                    <strong>dynamic pricing algorithms</strong>.
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="font-semibold text-red">PriceLabs API Integration:</span> Connected the PMS pricing engine with the
+                    <span class="font-semibold">PriceLabs API</span> for automatic synchronization of room rates and restrictions using
+                    <span class="font-semibold">dynamic pricing algorithms</span>.
                   </li>
 
-                  <li>
-                    <b>Web Scraping Automation:</b> Built <strong>data-scraping pipelines</strong> for importing hotel
+                  <li class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="font-semibold text-red">Web Scraping Automation:</span> Built <span class="font-semibold">data-scraping pipelines</span> for importing hotel
                     and room
-                    details directly from <strong>Booking.com</strong> and <strong>Airbnb</strong>, reducing onboarding
+                    details directly from <span class="font-semibold">Booking.com</span> and <span class="font-semibold">Airbnb</span>, reducing onboarding
                     time by
-                    more than <strong>60%</strong>.
+                    more than <span class="font-semibold">60%</span>.
                   </li>
                 </ul>
               </div>
