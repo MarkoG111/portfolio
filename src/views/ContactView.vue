@@ -68,7 +68,7 @@
                 errors.username
                   ? 'border-red-500 focus:ring-2 focus:ring-red-400'
                   : 'border-gray-300 focus:ring-2 focus:ring-orange-400 focus:border-orange-400'
-              ]" placeholder="John Doe" />
+              ]" placeholder="John Doe" name="name" />
 
               <p v-if="errors.username" class="text-red font-medium text-sm mt-1">
                 {{ errors.username }}
@@ -86,7 +86,7 @@
                 errors.email
                   ? 'border-red-500 focus:ring-2 focus:ring-red-400'
                   : 'border-gray-300 focus:ring-2 focus:ring-orange-400 focus:border-orange-400'
-              ]" placeholder="email@example.com" />
+              ]" placeholder="email@example.com" name="email" />
 
               <p v-if="errors.email" class="text-red font-medium text-sm mt-1">
                 {{ errors.email }}
@@ -101,8 +101,12 @@
 
               <textarea v-model="message" placeholder="Leave a message..." class="w-full h-32 p-4 rounded-lg border border-gray-300 text-sm bg-gray-50
            focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400
-           transition-all duration-200 resize-none"></textarea>
+           transition-all duration-200 resize-none" name="message"></textarea>
             </div>
+
+            <p v-if="successMsg" class="text-green-600 font-medium text-sm mb-3">
+              ✓ Message was sent successfully!
+            </p>
 
             <button class="bg-[#fa541c] text-white px-7 py-3 text-sm font-medium rounded-lg 
          hover:bg-black transition-all duration-200">
@@ -131,6 +135,8 @@ const message = ref("");
 
 // ref for the form DOM element (required by emailjs.sendForm)
 const contactForm = ref(null);
+
+const successMsg = ref(false);
 
 // reactive error object
 const errors = reactive({
@@ -174,14 +180,15 @@ function sendEmail() {
   if (!validate()) return;
 
   emailjs.sendForm(
-    "service_sehuo4m",
-    "template_4qxo3jf",
+    "service_exl4dpg",
+    "template_jz17lyb",
     contactForm.value,
-    "IEn0FnwWsRy4R8oT4"
+    "PwBxcqoCNTQAEJgTs"
   )
     .then(() => {
-      alert("Email successfully sent!");
+      successMsg.value = true;
       resetForm();
+      setTimeout(() => successMsg.value = false, 7000);
     })
     .catch(err => console.error("FAILED:", err));
 }
