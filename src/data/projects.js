@@ -89,12 +89,12 @@ export const projects = [
     title: "Marko's Blog",
     date: "March 2025",
     description: `
-      <p class="mb-3">Full-stack blog platform built with <strong>ASP.NET Core</strong> and <strong>React</strong>, focused on scalability and real-time interaction.</p>
+      <p class="mb-3">Full-stack blog platform focused on <strong>scalable architecture</strong> and <strong>real-time user interactions</strong>.</p>
       <ul class="list-disc ml-5 space-y-2 mb-3">
-        <li>Implemented <strong>CQRS</strong> to separate read/write logic and reduce coupling</li>
-        <li>Designed <strong>Clean Architecture</strong> (Domain, EFDataAccess, Application, Implementation, API, Client)</li>
-        <li>Built <strong>real-time notifications with SignalR</strong></li>
-        <li>Managed state using <strong>Redux + Context</strong></li>
+        <li>Implemented CQRS to decouple read and write operations</li>
+        <li>Designed a layered architecture with clear separation of concerns</li>
+        <li>Built real-time notification system for user activity with SignalR</li>
+        <li>Structured state management to handle complex application logic</li>
       </ul>`,
     details: `
       <p class="mb-3">
