@@ -6,32 +6,41 @@
             <div class="py-14">
                 <h2 class="text-red md:text-3xl xs:text-2xl uppercase">About</h2>
 
-                <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    I’m a <strong>full-stack developer</strong> with <strong>more than 2 years of professional
-                        experience</strong>,
-                    building <strong>production-grade applications</strong> and delivering <strong>end-to-end
-                        solutions</strong>
-                    from backend architecture and APIs to UI development, performance optimization, and automation
-                    workflows.
+                <p class="text-gray-500 uppercase tracking-wider text-sm mb-2">
+                    My Journey
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    I specialize in <strong>API integrations</strong>, <strong>real-time data synchronization</strong>,
-                    and
-                    <strong>automation systems</strong> that reduce manual work and improve reliability.
+                    I’m a full-stack developer focused on building real-world systems, with hands-on experience across
+                    backend development, APIs, and modern frontend applications.
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    My work includes developing a full <strong>Property Management System (PMS)</strong> with OTA
-                    integrations,
-                    pricing automation, reporting pipelines, and accounting system connections.
+                    My journey started from building simple static websites with <strong>HTML & CSS</strong>, where I
+                    learned how the
+                    web works at its core. From there, I moved into dynamic interfaces using <strong>JavaScript and
+                        AJAX</strong>, and
+                    later into <strong>full backend systems</strong> with PHP & MySQL.
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    My background in game development shaped my approach to performance, responsiveness, and user
-                    experience.
+                    Over time, I progressed to building more complex applications, starting with a <strong>Laravel-based
+                        e-learning platform</strong>, where I implemented payment flows and course management.
+
+                    I then expanded into <strong>ASP.NET Core and React</strong>, building real-time systems using
+                    SignalR, and designing scalable backend architectures based on CQRS and clean architecture
+                    principles.
                 </p>
 
+                <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
+                    Recently, I’ve been working on solving real-world engineering problems such as secure ticket
+                    validation, fraud prevention, and handling concurrency in event-based systems.
+                </p>
+
+                <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
+                    My focus today is on building reliable, scalable systems that solve actual business problems, not
+                    just implementing features.
+                </p>
                 <p class="md:text-xl py-4">
                     <a href="/cv/Marko_Gačanović_CV.pdf" download
                         class="download-link relative md:text-xl pl-6 text-red">Download CV</a>
