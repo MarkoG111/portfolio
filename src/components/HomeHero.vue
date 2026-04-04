@@ -5,7 +5,7 @@
     <div class="container flex flex-col md:flex-row mt-20 md:mt-32 fade-in">
 
       <!-- TEXT BLOCK -->
-      <div class="md:pt-7 lg:pt-36 xs:pt-14 md:text-left xs:text-center">
+      <div class="md:pt-7 lg:pt-24 xs:pt-14 md:text-left xs:text-center">
 
         <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
           Marko Gačanović
@@ -18,7 +18,7 @@
 
         <!-- SIGNATURE PORUKA -->
         <p class="md:text-xl xs:text-base md:mt-5 xs:mt-4 max-w-lg text-black/90 md:leading-relaxed xs:leading-snug">
-          I build complex web applications with real-time synchronization, API integrations, and automation systems.
+            Full-stack developer building scalable, real-time web applications with strong focus on APIs, integrations, and system reliability.
         </p>
 
         <!-- DUGMIĆI -->

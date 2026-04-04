@@ -71,9 +71,9 @@ const scrollTimeout = ref(null);
 
 const navItems = [
   { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
 

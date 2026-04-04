@@ -5,9 +5,9 @@
     </div>
     <HomeHero />
     <AboutView />
+    <ProjectsView />
     <ExperienceView />
     <SkillsView />
-    <ProjectsView />
     <BlogView />
     <ContactView />
   </div>
