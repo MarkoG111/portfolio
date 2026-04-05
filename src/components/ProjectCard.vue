@@ -9,6 +9,7 @@ defineProps({
     github: String,
     demo: String,
     hoverOffset: Number,
+
     reverse: Boolean,
     featured: Boolean,
     compact: Boolean
@@ -82,7 +83,7 @@ const getTechClass = (tech) => {
             </div>
 
             <!-- LINKS -->
-            <div class="flex gap-6 text-sm font-medium">
+            <div class="flex gap-6 text-sm font-medium flex-col md:flex-row">
                 <a :href="github" target="_blank" class="flex items-center gap-2 hover:text-red transition">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
                         <path
