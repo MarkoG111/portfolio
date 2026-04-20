@@ -18,7 +18,7 @@
 
         <!-- SIGNATURE PORUKA -->
         <p class="md:text-xl xs:text-base md:mt-5 xs:mt-4 max-w-lg text-black/90 md:leading-relaxed xs:leading-snug">
-            Full-stack developer building scalable, real-time web applications with strong focus on APIs, integrations, and system reliability.
+            Full-stack developer with production experience in API integrations, automated workflows and real-time systems. Shipping reliable software used by 5,000+ users across 40+ markets.
         </p>
 
         <!-- DUGMIĆI -->

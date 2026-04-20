@@ -26,7 +26,7 @@
 
                             <!-- Rola -->
                             <p class="text-sm text-gray-400 mt-1">
-                                {{ company === 'OTA Sync' ? 'Full-stack Developer' : 'Frontend Developer' }}
+                                {{ company === 'OTA Sync' ? 'Full Stack Developer' : 'Frontend Developer' }}
                             </p>
 
                             <!-- Datum badge -->
@@ -41,16 +41,11 @@
                         <div class="md:text-xl xs:text-l" v-if="selectedTitle == 'Frontmen Studio'">
                             <div>
                                 <p class="leading-[1.8] space-y-4 mt-3">
-                                    Developed and maintained multiple <span class="font-semibold">browser-based casino
-                                        slot games</span>, focusing on
-                                    <span class="font-semibold">graphics</span>, <span
-                                        class="font-semibold">animation</span>, <span class="font-semibold">game
-                                        logic</span>, and
-                                    <span class="font-semibold">performance optimization</span>. Collaborated closely
-                                    with
-                                    <span class="font-semibold">designers</span> and <span class="font-semibold">backend
-                                        engineers</span> to deliver visually consistent and
-                                    stable gameplay experiences.
+                                    Worked on development and maintenance of browser-based casino slot games within a
+                                    modular, config-driven engine built on Angular 1.5 and Pixi.js. Responsible for the
+                                    complete frontend game layer, from processing server spin outcomes to rendering
+                                    reels, synchronizing animations and audio, and stabilizing features across
+                                    production titles.
                                 </p>
                             </div>
                             <div>
@@ -62,32 +57,32 @@
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Implemented game mechanics:</span>
-                                        Re-spins, free spins, turbo mode, auto-play, and bonus multipliers using
-                                        JavaScript (ES6+), Pixi.js, and GSAP.
+                                        <span class="font-semibold text-red">Implemented complex game features:</span>
+                                        SwitchingStacks reel-swap (backend bonusInfo -> client mapping -> Spine
+                                        animation), StickyWilds with live respin counters, Free Spins trigger/retrigger,
+                                        and turbo/slam-stop spin control.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Synced gameplay systems:</span>
-                                        Coordinated animations and sound with server-driven outcomes via a custom
-                                        communication layer.
-                                    </li>
-
-                                    <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Optimized performance:</span>
-                                        Reduced frame drops and ensured smooth cross-browser and cross-device gameplay.
+                                        <span class="font-semibold text-red">Owned the full spin flow:</span>
+                                        UI event (SlotInterfaceService) -> game state logic (SlotService) -> server
+                                        communication (LeanderLegaCommunicationService) -> reels render, win-line
+                                        highlights and audio sync, coordinated via Promises and GSAP timelines.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Resolved production issues:</span>
-                                        Fixed timing bugs, animation layering conflicts, turbo delays, and invalid
-                                        autoplay states under tight deadlines.
+                                        Race conditions causing duplicate spin requests (spinInProgress flags), autoplay
+                                        counter going negative during sticky-wild features (stopOnFeature guards),
+                                        broken Promise chains from missing .bind() calls, and animation layering
+                                        conflicts.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Handled localization & compliance:</span>
-                                        Delivered stable integrations for DE, ES, and UK markets on the Leander
-                                        platform.
+                                        <span class="font-semibold text-red">Localization & regulated markets:</span>
+                                        Adapted games for DE, ES and UK. Market-conditional UI via PHP config
+                                        preprocessing, RTP rule adjustments and jurisdiction-specific autoplay
+                                        restrictions.
                                     </li>
                                 </ul>
                             </div>
@@ -95,83 +90,56 @@
                         <div class="md:text-xl xs:text-l" v-if="selectedTitle == 'OTA Sync'">
                             <div>
                                 <p class="leading-[1.8] space-y-4 mt-3">
-                                    Worked on the development of an advanced <span class="font-semibold">Property
-                                        Management System (PMS)</span> and
-                                    <span class="font-semibold">Channel Management platform</span> for hotels and
-                                    apartments, enabling property owners to
-                                    synchronize data across multiple <span class="font-semibold">Online Travel Agencies
-                                        (OTAs)</span>.
-                                    Responsible for <span class="font-semibold">API integrations</span>, <span
-                                        class="font-semibold">automated reporting</span>, and the
-                                    development of
-                                    complex internal modules, including <span class="font-semibold">reservation
-                                        management</span>, <span class="font-semibold">room
-                                        availability</span>,
-                                    and <span class="font-semibold">guest invoicing</span>.
+                                    Worked on a cloud-based Property Management System (PMS) used by <span
+                                        class="font-semibold">5,000+ users across 40+ markets</span>, enabling hotels
+                                    and apartment owners to manage reservations, pricing, expenses and guest
+                                    communication from a single platform. Core focus was on API integrations, automated
+                                    workflows, and internal module development.
                                 </p>
                             </div>
                             <div>
                                 <ul class="list-disc ml-5 mt-4 space-y-4 leading-[1.8]">
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">OpenGDS Integration:</span> Implemented
-                                        full data exchange between the PMS and the
-                                        <span class="font-semibold">OpenGDS network</span> for hotels, rooms, pricing,
-                                        and reservations.
-                                        Designed mapping tables (<em>gds_properties</em>, <em>gds_room_types</em>,
-                                        <em>gds_pricing_plans</em>) to link
-                                        internal PMS IDs with external GDS IDs, ensuring reliable synchronization.
-                                        Built <span class="font-semibold">PHP cURL connectors</span> for data
-                                        import/export and <span class="font-semibold">webhook
-                                            handlers</span> for
-                                        real-time push updates.
+                                        <span class="font-semibold text-red">OpenGDS Integration:</span> Connected the
+                                        PMS to the global travel agency network. Built PHP cURL connectors, designed
+                                        mapping tables for properties, room types and pricing plans, and implemented
+                                        webhook handlers for real-time reservation sync.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Expenses Module:</span> Developed a
-                                        complete <span class="font-semibold">Expense Management system</span> supporting
-                                        both
-                                        manual and recurring (daily, monthly, yearly) expenses. Integrated <span
-                                            class="fontspanibold">cron jobs</span> for
-                                        automatic
-                                        generation of recurring entries, along with <span
-                                            class="font-semibold">PDF/Excel exports</span> and advanced
-                                        filtering options.
+                                        <span class="font-semibold text-red">PriceLabs API Integration:</span> Built a
+                                        bidirectional REST flow between the PMS and PriceLabs dynamic pricing engine.
+                                        PMS pushes listings and calendars, PriceLabs fires signed webhooks with updated
+                                        rates, which are then validated and applied in bulk.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Reports and Automated Emails:</span> Built
-                                        a system for <span class="font-semibold">automated report generation</span>
-                                        and
-                                        <span class="font-semibold">email distribution</span> (Lost & Found, expenses,
-                                        reservations, performance stats).
-                                        Created <span class="font-semibold">customizable email templates</span> and
-                                        scheduling logic for automatic delivery.
+                                        <span class="font-semibold text-red">Minimax Integration:</span> Developed an
+                                        adapter layer that maps internal invoices to Minimax accounting REST format,
+                                        handles OAuth2 token refresh, and stores external IDs, removing the need for
+                                        manual double bookkeeping.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Minimax Integration:</span> Integrated PMS
-                                        data with <span class="font-semibold">Minimax accounting software</span>,
-                                        enabling
-                                        automatic export of invoices and financial data to streamline bookkeeping and
-                                        reduce manual work.
+                                        <span class="font-semibold text-red">Expenses Module:</span> Built a full
+                                        expense tracking system with manual and recurring (daily, monthly, yearly)
+                                        entries, cron-based auto-generation with duplicate prevention, room-level cost
+                                        allocation, and PDF/Excel export.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">PriceLabs API Integration:</span> Connected
-                                        the PMS pricing engine with the
-                                        <span class="font-semibold">PriceLabs API</span> for automatic synchronization
-                                        of room rates and restrictions using
-                                        <span class="font-semibold">dynamic pricing algorithms</span>.
+                                        <span class="font-semibold text-red">Automated Emails:</span>
+                                        Implemented configurable guest notification templates with placeholder
+                                        substitution, rule-based scheduling (X days before/after arrival or departure),
+                                        per-channel filtering, and delivery via InfoBip API.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Web Scraping Automation:</span> Built <span
-                                            class="font-semibold">data-scraping pipelines</span> for importing hotel
-                                        and room
-                                        details directly from <span class="font-semibold">Booking.com</span> and <span
-                                            class="font-semibold">Airbnb</span>, reducing onboarding
-                                        time by
-                                        more than <span class="font-semibold">60%</span>.
+                                        <span class="font-semibold text-red">Content Import from Airbnb &
+                                            Booking.com:</span>
+                                        Built scraping pipelines using WebScrapingAPI. Extracts
+                                        room data, descriptions, occupancy info and images, converts to base64, and maps
+                                        directly into internal DB tables, reducing onboarding time by 60%.
                                     </li>
                                 </ul>
                             </div>
