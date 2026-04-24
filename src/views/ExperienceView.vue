@@ -90,56 +90,46 @@
                         <div class="md:text-xl xs:text-l" v-if="selectedTitle == 'OTA Sync'">
                             <div>
                                 <p class="leading-[1.8] space-y-4 mt-3">
-                                    Worked on a cloud-based Property Management System (PMS) used by <span
-                                        class="font-semibold">5,000+ users across 40+ markets</span>, enabling hotels
-                                    and apartment owners to manage reservations, pricing, expenses and guest
-                                    communication from a single platform. Core focus was on API integrations, automated
-                                    workflows, and internal module development.
+                                    Worked on a large-scale cloud-based Property Management System (PMS) used by <span
+                                    class="font-semibold">5000+ users</span> across <span class="font-semibold">40+ markets</span>, focused on real-time data synchronization, third-party integrations, and automation of core hotel operations.
+
+                                    Owned backend-heavy features where data consistency, external API reliability, and async processing were critical to preventing issues like overbooking and financial mismatches.
                                 </p>
                             </div>
                             <div>
                                 <ul class="list-disc ml-5 mt-4 space-y-4 leading-[1.8]">
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">OpenGDS Integration:</span> Connected the
-                                        PMS to the global travel agency network. Built PHP cURL connectors, designed
-                                        mapping tables for properties, room types and pricing plans, and implemented
-                                        webhook handlers for real-time reservation sync.
+                                        <span class="font-semibold text-red">OpenGDS Integration:</span> Built a bidirectional reservation synchronization system between the PMS and external distribution networks (GDS), handling both inbound webhooks for new/updated bookings and outbound updates for availability, pricing, and cancellations. Implemented mapping between internal entities and external IDs, ensured idempotent processing of reservation events, and maintained data consistency across platforms to prevent overbooking and state conflicts.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">PriceLabs API Integration:</span> Built a
-                                        bidirectional REST flow between the PMS and PriceLabs dynamic pricing engine.
-                                        PMS pushes listings and calendars, PriceLabs fires signed webhooks with updated
-                                        rates, which are then validated and applied in bulk.
+                                        <span class="font-semibold text-red">Minimax Integration:</span> Owned the end-to-end integration with Minimax ERP, designing an adapter layer to translate complex internal invoice models into external API schemas. Implemented OAuth2 token management, automated invoice synchronization, and external ID tracking for reconciliation. Handled edge cases such as partial failures and retry scenarios to ensure consistency between systems, effectively replacing manual double-entry accounting workflows.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Minimax Integration:</span> Developed an
-                                        adapter layer that maps internal invoices to Minimax accounting REST format,
-                                        handles OAuth2 token refresh, and stores external IDs, removing the need for
-                                        manual double bookkeeping.
+                                        <span class="font-semibold text-red">Pantheon Integration:</span> Built backend-driven invoice synchronization with Pantheon accounting API, transforming internal invoice data into structured payloads with line items, tax logic, and multi-method payments. Implemented mapping layers for payment types and tax codes, and ensured accurate financial data transfer through validation and error handling mechanisms.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Expenses Module:</span> Built a full
-                                        expense tracking system with manual and recurring (daily, monthly, yearly)
-                                        entries, cron-based auto-generation with duplicate prevention, room-level cost
-                                        allocation, and PDF/Excel export.
+                                        <span class="font-semibold text-red">Content Import Pipeline:</span>
+                                            Built automated data ingestion pipelines for importing property content from Airbnb and Booking.com using WebScrapingAPI. Extracted and normalized unstructured data including room details, descriptions, occupancy, and media assets, implemented image processing and base64 conversion, and mapped results into internal data models. Reduced manual onboarding time by ~60% by eliminating the need for manual data entry.
+                                    </li>
+
+                                    <li class="p-1 rounded-lg shadow-sm border border-gray-100">
+                                        <span class="font-semibold text-red">PriceLabs Integration:</span> Designed and implemented a full bidirectional integration between the PMS and PriceLabs dynamic pricing engine, owning the entire data flow from outbound synchronization (listings, calendars, reservations) to inbound webhook processing for real-time rate updates. Built secure webhook endpoints with signature validation, handled schema mismatches through custom mapping layers, and implemented bulk update strategies for efficient calendar synchronization. Addressed edge cases such as delayed webhooks, partial updates, and data conflicts to maintain consistency across systems, enabling fully automated, demand-driven pricing.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                                         <span class="font-semibold text-red">Automated Emails:</span>
-                                        Implemented configurable guest notification templates with placeholder
-                                        substitution, rule-based scheduling (X days before/after arrival or departure),
-                                        per-channel filtering, and delivery via InfoBip API.
+                                        Built a rule-based email system for guest communication, supporting configurable templates with dynamic placeholder substitution, event-based scheduling (before/after arrival or departure), and filtering by channel and room. Implemented backend-driven delivery via external APIs, enabling automated, targeted communication workflows.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Content Import from Airbnb &
-                                            Booking.com:</span>
-                                        Built scraping pipelines using WebScrapingAPI. Extracts
-                                        room data, descriptions, occupancy info and images, converts to base64, and maps
-                                        directly into internal DB tables, reducing onboarding time by 60%.
+                                        <span class="font-semibold text-red">Expenses Module:</span> Designed and implemented a full expense management module supporting manual and recurring entries (daily, monthly, yearly), with cron-based automation and duplicate prevention. Modeled relationships across properties, room types, and individual rooms, enabling granular cost allocation. Built reporting and export functionality (PDF/Excel) to support financial analysis and operational tracking.
+                                    </li>
+
+                                    <li class="p-1 rounded-lg shadow-sm border border-gray-100">
+                                        <span class="font-semibold text-red">UI Theme System:</span> Designed and implemented a persistent dark/light theme system with runtime CSS switching and state management via localStorage, ensuring consistent UI behavior and user preference retention across sessions.
                                     </li>
                                 </ul>
                             </div>
