@@ -41,48 +41,39 @@
                         <div class="md:text-xl xs:text-l" v-if="selectedTitle == 'Frontmen Studio'">
                             <div>
                                 <p class="leading-[1.8] space-y-4 mt-3">
-                                    Worked on development and maintenance of browser-based casino slot games within a
-                                    modular, config-driven engine built on Angular 1.5 and Pixi.js. Responsible for the
-                                    complete frontend game layer, from processing server spin outcomes to rendering
-                                    reels, synchronizing animations and audio, and stabilizing features across
-                                    production titles.
+                                    Worked on browser-based casino slot games within a modular, config-driven game engine, handling real-time game state, animation synchronization, and server-driven outcomes.
                                 </p>
                             </div>
                             <div>
                                 <ul class="list-disc ml-5 mt-4 space-y-3 leading-[1.7]">
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Built and maintained slot games:</span>
-                                        Dino Zone, Moonlight Wolves, Silk Road Riches, Super Stack A Cat, Fortune Teller
-                                        6, Aztec Blox, Wild West Zone.
+                                        <span class="font-semibold text-red">Game Flow & State Management:</span>
+                                        Owned the full frontend game loop, from user input handling to processing server outcomes and rendering results. Managed real-time game state, synchronized UI, animations, and backend responses to ensure consistent gameplay flow across spins, wins, and feature triggers.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Implemented complex game features:</span>
-                                        SwitchingStacks reel-swap (backend bonusInfo -> client mapping -> Spine
-                                        animation), StickyWilds with live respin counters, Free Spins trigger/retrigger,
-                                        and turbo/slam-stop spin control.
+                                        <span class="font-semibold text-red">Config-Driven Game Engine:</span>
+                                        Worked within a modular, config-driven architecture where layouts, animations, and UI behavior were defined via JSON/PHP configurations, enabling rapid game reskinning and feature reuse without modifying core engine logic.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Owned the full spin flow:</span>
-                                        UI event (SlotInterfaceService) -> game state logic (SlotService) -> server
-                                        communication (LeanderLegaCommunicationService) -> reels render, win-line
-                                        highlights and audio sync, coordinated via Promises and GSAP timelines.
+                                        <span class="font-semibold text-red">Gameplay Features Implementation:</span>
+                                        Implemented and stabilized complex slot mechanics including Switching Stacks (reel swapping), Sticky Wilds, Free Spins logic, and respin systems, ensuring correct mapping of backend feature data to frontend presentation and animations.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Resolved production issues:</span>
-                                        Race conditions causing duplicate spin requests (spinInProgress flags), autoplay
-                                        counter going negative during sticky-wild features (stopOnFeature guards),
-                                        broken Promise chains from missing .bind() calls, and animation layering
-                                        conflicts.
+                                        <span class="font-semibold text-red">Animation & Rendering Synchronization:</span>
+                                        Coordinated high-performance animations using GSAP timelines and Pixi.js rendering, synchronizing reels, win-line highlights, and audio with backend-driven outcomes in real time.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Localization & regulated markets:</span>
-                                        Adapted games for DE, ES and UK. Market-conditional UI via PHP config
-                                        preprocessing, RTP rule adjustments and jurisdiction-specific autoplay
-                                        restrictions.
+                                        <span class="font-semibold text-red">Production Stability & Debugging:</span>
+                                        Resolved complex production issues including race conditions in spin requests, duplicate API calls, broken Promise chains, autoplay inconsistencies, and animation timing conflicts, significantly improving gameplay stability.
+                                    </li>
+
+                                    <li class="p-2 rounded-lg border border-gray-100">
+                                        <span class="font-semibold text-red">Backend Integration Layer:</span>
+                                        Worked on communication layer mapping server responses into frontend game models, ensuring correct rendering of symbols, win states, and feature triggers across different game scenarios.
                                     </li>
                                 </ul>
                             </div>
