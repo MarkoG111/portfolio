@@ -206,7 +206,7 @@ export const projects = [
       <p class="text-gray-600">
         This project helped me understand real-world backend challenges such as payment consistency, state management between client and server, and building scalable CRUD systems.
       </p>`,
-    stack: ["JavaScript / jQuery", "Laravel", "MySQL", "AJAX", "Bootstrap 4"],
+    stack: ["Laravel", "JavaScript / jQuery", "MySQL", "AJAX", "Bootstrap 4"],
     image: "/images/projects/gacanovic-academy.png",
     github: "https://github.com/MarkoG111/gacanovic_academy",
     demo: "https://gacanovic-academy.infinityfree.me/",
@@ -219,7 +219,7 @@ export const projects = [
     date: "July 2020",
     description: `
       <p class="mb-2">
-        Car rental web application built with <strong>PHP</strong> and <strong>MySQL</strong>, focused on dynamic data handling and user interaction.
+        Car rental web application built with <strong>OOP PHP</strong> following the <strong>MVC</strong> architectural pattern with a <strong>Front Controller</strong> entry point, focused on dynamic data handling and user interaction.
       </p>
       <ul class="list-disc ml-5 space-y-1">
         <li>AJAX filtering with pagination (no page reload)</li>
@@ -300,7 +300,7 @@ export const projects = [
         <li>AJAX-based product listing, filtering and pagination</li>
         <li>Shopping cart using LocalStorage</li>
         <li>User authentication and session management</li>
-        <li>Admin dashboard with orders, users and products</li>
+        <li>Admin dashboard with orders, polls, users and products</li>
       </ul>`,
     details: `
       <p class="mb-3">
@@ -472,7 +472,7 @@ export const projects = [
         <div>
           <p class="font-medium">Building layouts without frameworks</p>
           <p class="text-gray-600">
-            Without any libraries, I learned how to structure pages using pure <strong>HTML and CSS</strong>, including positioning, spacing, and responsive behavior.
+            Without any libraries, I learned how to structure pages using pure <strong>HTML and CSS</strong>, including positioning and spacing.
           </p>
         </div>
         <div>
