@@ -44,7 +44,7 @@
                     maintainable, and built to solve real business problems.
                 </p>
                 <p class="md:text-xl py-4">
-                    <a href="/cv/Marko_Gačanović_CV.pdf" download
+                    <a href="/cv/Marko_Gacanovic_Fullstack.pdf" download
                         class="download-link relative md:text-xl pl-6 text-red">Download CV</a>
                 </p>
             </div>

@@ -119,7 +119,7 @@
   </div>
 
   <div id="footer" class="fixed bottom-0 w-full bg-[#fa541c] text-white p-2 text-center hidden">
-    <a href="/cv/Marko_Gačanović_CV.pdf" download class="font-bold underline underline-offset-4">Download CV</a>
+    <a href="/cv/Marko_Gacanovic_Fullstack.pdf" download class="font-bold underline underline-offset-4">Download CV</a>
   </div>
 </template>
 
