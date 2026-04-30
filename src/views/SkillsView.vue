@@ -30,6 +30,7 @@ import SkillItem from '@/components/SkillItem.vue';
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 <SkillItem img="/images/skills/sass.png" label="SASS" />
                 <SkillItem img="/images/skills/tailwind.png" label="Tailwind CSS" />
+                <SkillItem img="/images/skills/bootstrap.png" label="Bootstrap" />
             </div>
         </div>
 
