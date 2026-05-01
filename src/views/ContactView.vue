@@ -23,21 +23,6 @@
               </a>
             </li>
 
-            <!-- TWITTER -->
-            <li>
-              <a href="https://twitter.com/" target="_blank" class="relative flex items-center gap-3 text-lg font-medium text-gray-900 tracking-wide 
-             transition-all duration-200 hover:text-white px-3 py-1
-             before:absolute before:top-0 before:left-0 before:h-full before:w-0
-             before:bg-gradient-to-r before:from-[#fa5441] before:to-[#3d0101]
-             before:-z-10 before:transition-all before:duration-300 hover:before:w-[50%]">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 16.11 3c-2.63 0-4.77 2.14-4.77 4.77 0 .37.05.74.13 1.09C7.69 8.64 4.07 6.73 1.64 3.9A4.77 4.77 0 0 0 2.96 10a4.44 4.44 0 0 1-2.16-.6v.06a4.78 4.78 0 0 0 3.83 4.68c-.6.16-1.26.2-1.93.07a4.77 4.77 0 0 0 4.44 3.3A9 9 0 0 1 1 19.54a12.73 12.73 0 0 0 6.92 2.03c8.3 0 12.84-6.87 12.84-12.84 0-.2 0-.41-.02-.61A9.22 9.22 0 0 0 23 3Z" />
-                </svg>
-                Twitter
-              </a>
-            </li>
-
             <!-- LINKEDIN -->
             <li>
               <a href="https://www.linkedin.com/in/marko-ga%C4%8Danovi%C4%87-4a133016a/" target="_blank" class="relative flex items-center gap-3 text-lg font-medium text-gray-900 tracking-wide 
