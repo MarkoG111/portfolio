@@ -77,7 +77,7 @@ export const projects = [
           </p>
         </div>
       </div>`,
-    stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "Elementor"],
+    stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
     image: "/images/projects/renegade-urban-winery.png",
     github: "https://github.com/MarkoG111/renegade_urban_winery",
     demo: "https://renegade-winary.infinityfreeapp.com/",
