@@ -1,19 +1,19 @@
 export const projects = [
-  {
-    id: 1,
-    title: "Renegade Urban Winery",
-    date: "February 2026",
-    description: `
+    {
+        id: 1,
+        title: "Renegade Urban Winery",
+        date: "February 2026",
+        description: `
       <p class="mb-2">
         Custom event ticketing system built on top of <strong>WooCommerce</strong>, focused on secure ticket validation.
       </p>
       <ul class="list-disc ml-5 space-y-1">
         <li>QR-based ticket validation with HMAC protection</li>
         <li>Seat allocation with transactions (race condition solved)</li>
-        <li>Custom ticket system with PDF generation</li>
+        <li>Automated PDF ticket generation with unique non-sequential IDs</li>
         <li>Real-time check-in tracking via REST API</li>
       </ul>`,
-    details: `
+        details: `
       <p class="mb-3">
         Renegade Urban Winery is a custom-built event ticketing system developed on top of WooCommerce, designed to transform a standard eCommerce platform into a fully controlled event management system.
       </p>
@@ -65,8 +65,7 @@ export const projects = [
         <div>
           <p class="font-medium">Limitations of WooCommerce</p>
           <p class="text-gray-600">
-            WooCommerce lacks event-specific logic. 
-            I built a <strong>custom backend layer</strong> on top of it to handle ticket lifecycle, validation, and check-in tracking.
+            WooCommerce lacks event-specific logic entirely. Solved by building a custom backend layer on top of it, keeping payment and order handling intact while adding full ticket lifecycle control
           </p>
         </div>
         <div>
@@ -77,147 +76,141 @@ export const projects = [
           </p>
         </div>
       </div>`,
-    stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
-    image: "/images/projects/renegade-urban-winery.png",
-    github: "https://github.com/MarkoG111/renegade_urban_winery",
-    demo: "https://renegade-winary.infinityfreeapp.com/",
-    reverse: true,
-    hoverOffset: 70
-  },
-  {
-    id: 2,
-    title: "Marko's Blog",
-    date: "March 2025",
-    description: `
-      <p class="mb-3">Full-stack blog platform focused on <strong>scalable architecture</strong> and <strong>real-time user interactions</strong>.</p>
+        stack: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
+        image: "/images/projects/renegade-urban-winery.png",
+        github: "https://github.com/MarkoG111/renegade_urban_winery",
+        demo: "https://renegade-winary.infinityfreeapp.com/",
+        reverse: true,
+        hoverOffset: 70
+    },
+    {
+        id: 2,
+        title: "Marko's Blog",
+        date: "March 2025",
+        description: `
+      <p class="mb-3">Full-stack blog platform with CQRS architecture, <strong>real-time notifications</strong>, and fine-grained authorization.</p>
       <ul class="list-disc ml-5 space-y-2 mb-3">
-        <li>Implemented CQRS to decouple read and write operations</li>
-        <li>Designed a layered architecture with clear separation of concerns</li>
-        <li>Built real-time notification system for user activity with SignalR</li>
-        <li>Structured state management to handle complex application logic</li>
+        <li>Designed a 6-layer Clean Architecture (Domain -> API) with strict separation of concerns</li>
+        <li>Built real-time notification system using SignalR WebSockets (likes, comments, follows)</li>
+        <li>Implemented CQRS with a centralized UseCaseExecutor handling auth, logging, and execution</li>
+        <li>Engineered use-case level permissions, fine-grained access control beyond role checks</li>
       </ul>`,
-    details: `
+        details: `
       <p class="mb-3">
-        Marko’s Blog is a full-stack application built with ASP.NET Core and React, designed with a strong focus on scalability, maintainability, and real-time user interaction.
+        Marko's Blog is a production-oriented full-stack platform built to go well beyond a typical CRUD application - with real-time interactions, a CQRS-inspired backend, and authorization that operates at the individual action level.
       </p>
       <p class="mb-3">
-        The system follows a layered architecture (Domain, EFDataAccess, Application, Implementation, API, Client), ensuring clear separation of concerns and independence between business logic and technical implementation.
+        The backend is structured across six independent layers (Domain, EFDataAccess, Application, Implementation, API, Client), each with a single, well-defined responsibility. Business logic never leaks into controllers, and infrastructure details never bleed into the domain.
       </p>
       <p class="mb-3">
-        The backend is built using <strong>CQRS (Command Query Responsibility Segregation)</strong>, separating read and write operations into independent flows. This improves maintainability, simplifies complex logic, and allows better control over data access.
+        All commands and queries flow through a centralized UseCaseExecutor, which handles authorization checks, audit logging, and execution in one consistent pipeline - eliminating duplicated logic and making every user action traceable.
       </p>
       <p class="mb-3">
-        A central <strong>UseCaseExecutor</strong> is responsible for handling execution of all commands and queries, including authorization and logging. This ensures consistent behavior across the system and removes duplicated logic from controllers.
+        Real-time notifications are delivered via SignalR WebSockets. When a user receives a like, comment, or new follower, the notification appears instantly - no polling, no page refresh.
       </p>
       <p class="mb-3">
-        The application includes a <strong>real-time notification system</strong> built with SignalR, allowing users to receive instant updates for likes, comments, and follows without refreshing the page.
+        Authentication is hybrid: standard JWT login plus Google OAuth via Firebase. Authorization goes further than roles - each user holds a list of allowed use-cases, updated automatically when their role changes.
       </p>
       <p class="mb-3">
         Authentication and authorization are implemented using <strong>JWT</strong>, with support for role-based access and use-case level permissions.
       </p>
       <p class="mb-3">
-        On the frontend, React is used with <strong>Redux Toolkit</strong> for global state management and Context API for scoped logic, creating a clear separation between global and local state.
+        On the frontend, Redux Toolkit manages global state (user session, notifications, theme) while React Context handles scoped UI feedback (errors, success messages). Redux Persist keeps the session alive across page refreshes.
       </p>
-      <p class="mb-3">
-        The system supports advanced features such as filtering, pagination, follow system, nested comments, and activity tracking through centralized use-case logging.
-      </p>
-      <p class="text-gray-600">
-        This project demonstrates the design of scalable backend systems, implementation of real-time communication, and application of architectural patterns such as CQRS and Clean Architecture.
-      </p>
+
       <hr class="my-6"/>
       <h4 class="font-semibold mb-3">Key Challenges & Solutions</h4>
       <div class="space-y-4 text-sm">
         <div>
-          <p class="font-medium">Separation of business logic</p>
+          <p class="font-medium">Overloaded controllers</p>
           <p class="text-gray-600">
-            Controllers were becoming overloaded with logic. 
-            I solved this by introducing <strong>UseCaseExecutor</strong>, centralizing execution, authorization, and logging of all use-cases.
+            As features grew, controllers were accumulating authorization and logging logic. 
+            I introduced UseCaseExecutor as a single execution pipeline - controllers now only 
+            receive a request and delegate. All cross-cutting concerns live in one place.
           </p>
         </div>
         <div>
-          <p class="font-medium">Managing complex application structure</p>
+          <p class="font-medium">Authorization beyond roles</p>
           <p class="text-gray-600">
-            As the system grew, maintaining clean architecture became difficult. 
-            I applied <strong>CQRS and layered architecture</strong> to separate responsibilities and reduce coupling between components.
+            Role-based access wasn't granular enough. I built a use-case permission system where 
+            each user holds an explicit list of allowed actions, derived from their role and 
+            automatically synchronized when that role changes.
           </p>
         </div>
         <div>
           <p class="font-medium">Real-time user interaction</p>
           <p class="text-gray-600">
-            Users needed instant feedback for interactions like likes and comments. 
-            I implemented <strong>SignalR</strong> to push real-time notifications without page refresh.
+            Users needed instant feedback for interactions. SignalR handles this cleanly - each 
+            user joins a group identified by their ID, and the backend pushes targeted notifications 
+            without broadcasting to everyone.
           </p>
         </div>
         <div>
           <p class="font-medium">State management complexity</p>
           <p class="text-gray-600">
-            Mixing global and local state caused inconsistencies. 
-            I separated concerns using <strong>Redux for global state</strong> and <strong>Context API for scoped logic</strong>.
+            Mixing global and local state caused subtle inconsistencies. I separated them clearly: 
+            Redux for data that lives across the app (session, notifications), Context API for 
+            transient UI state (toasts, error messages).
           </p>
         </div>
         <div>
-          <p class="font-medium">Authorization and security</p>
+          <p class="font-medium">Nested comments with a single query</p>
           <p class="text-gray-600">
-            Managing permissions across multiple features was complex. 
-            I implemented <strong>JWT-based authentication</strong> with role and use-case level authorization.
+            Rendering threaded comments efficiently was tricky. I load all comments flat in one 
+            query, then build the hierarchy in memory using a lookup dictionary and recursion - 
+            avoiding N+1 queries entirely.
           </p>
         </div>
       </div>`,
-    stack: ["React / Redux", "ASP.NET Core", "SQL", "Tailwind CSS"],
-    image: "/images/projects/marko-blog.png",
-    github: "https://github.com/MarkoG111/marko_blog",
-    demo: "https://marko-blog.vercel.app/",
-    reverse: false,
-    hoverOffset: 55
-  },
-  {
-    id: 3,
-    title: "Gačanović Academy",
-    date: "April 2021",
-    description: `
+        stack: ["React / Redux", "ASP.NET Core 8", "PostgreSQL", "Tailwind CSS"],
+        image: "/images/projects/marko-blog.png",
+        github: "https://github.com/MarkoG111/marko_blog",
+        demo: "https://marko-blog.vercel.app/",
+        reverse: false,
+        hoverOffset: 55
+    },
+    {
+        id: 3,
+        title: "Gačanović Academy",
+        date: "April 2021",
+        description: `
       <p class="mb-2">
-        E-learning platform built with <strong>Laravel</strong>, focused on course management and real payment processing.
+        Full-stack <strong>Laravel</strong> e-learning platform with Stripe payment integration, role-based access control, and dynamic course management.
       </p>
       <ul class="list-disc ml-5 space-y-1">
-        <li>Stripe payment integration with session validation and webhook fallback to handle failed redirects</li>
-        <li>AJAX-based cart with LocalStorage</li>
-        <li>Role system (User, Author, Admin)</li>
-        <li>Dynamic filtering, wishlist and course system</li>
+        <li>Implemented complete Stripe checkout flow: session creation, order tracking, and webhook fallback for failed redirects</li>
+        <li>Built AJAX cart with LocalStorage, including duplicate purchase prevention and real-time updates</li>
+        <li>Designed three-role system (Student, Author, Admin) with middleware-based route protection</li>
+        <li>Delivered admin dashboard with full CRUD, server-side pagination, and activity logging</li>
       </ul>`,
-    details: `
+        details: `
       <p class="mb-3">
-        Gačanović Academy is a full-stack e-learning platform built with Laravel, designed for selling and managing online courses with real payment integration.
+        Gačanović Academy is a full-stack e-learning platform built with Laravel for selling and managing online courses with real payment processing.
       </p>
       <p class="mb-3">
-        The platform supports multiple user roles (User, Author, Admin). Users can browse, filter, and purchase courses, while authors can create and manage their own content. Admins have full control over courses, categories, users, and system logs.
+        The platform supports three user roles. Students browse, filter, and purchase courses. Authors create and manage their own content after completing an onboarding survey. Admins have full control over courses, categories, users, orders, and system logs.
       </p>
       <p class="mb-3">
-        A key feature is the <strong>Stripe payment integration</strong>, where I implemented full checkout flow including session creation, order tracking, and validation. Orders are first stored as "unpaid" and later confirmed using Stripe session validation and webhooks to handle edge cases like failed redirects or lost connections.
+        The core technical challenge was the Stripe integration. Orders are stored as "unpaid" on session creation, then confirmed through Stripe session validation on redirect. A webhook listener handles edge cases: failed redirects, closed tabs, or dropped connections, ensuring payment consistency regardless of client behavior.
       </p>
       <p class="mb-3">
-        The cart system is built using <strong>AJAX and LocalStorage</strong>, allowing smooth interaction without page reloads. Users can add/remove courses dynamically while preventing duplicate purchases.
+        The cart runs entirely on AJAX and LocalStorage, enabling smooth interaction without page reloads and preventing duplicate purchases across sessions. The platform also includes advanced filtering by category, topic, price, and author, alongside wishlist functionality and dynamic pagination.
       </p>
       <p class="mb-3">
-        The platform includes advanced filtering (by category, topic, price, author), wishlist functionality, and dynamic pagination. All data is fetched from the database and rendered dynamically.
-      </p>
-      <p class="mb-3">
-        On the admin side, I built a complete dashboard for managing courses, categories, topics, users, orders, and logs, with full CRUD operations and server-side pagination.
-      </p>
-      <p class="text-gray-600">
-        This project helped me understand real-world backend challenges such as payment consistency, state management between client and server, and building scalable CRUD systems.
+        This project was my first encounter with real payment infrastructure and taught me how much complexity lives between "payment initiated" and "order confirmed." It shaped how I think about state consistency between client and server.
       </p>`,
-    stack: ["Laravel", "JavaScript / jQuery", "MySQL", "AJAX", "Bootstrap 4"],
-    image: "/images/projects/gacanovic-academy.png",
-    github: "https://github.com/MarkoG111/gacanovic_academy",
-    demo: "https://gacanovic-academy.infinityfree.me/",
-    reverse: true,
-    hoverOffset: 60
-  },
-  {
-    id: 4,
-    title: "Škoda Rental",
-    date: "July 2020",
-    description: `
+        stack: ["Laravel", "JavaScript / jQuery", "MySQL", "AJAX", "Bootstrap 4"],
+        image: "/images/projects/gacanovic-academy.png",
+        github: "https://github.com/MarkoG111/gacanovic_academy",
+        demo: "https://gacanovic-academy.infinityfree.me/",
+        reverse: true,
+        hoverOffset: 60
+    },
+    {
+        id: 4,
+        title: "Škoda Rental",
+        date: "July 2020",
+        description: `
       <p class="mb-2">
         Car rental web application built with <strong>OOP PHP</strong> following the <strong>MVC</strong> architectural pattern with a <strong>Front Controller</strong> entry point, focused on dynamic data handling and user interaction.
       </p>
@@ -227,7 +220,7 @@ export const projects = [
         <li>Admin dashboard with full CRUD operations</li>
         <li>Server + client-side validation and logging</li>
       </ul>`,
-    details: `
+        details: `
       <p class="mb-3">
         Škoda Rental is a full-stack web application built using PHP, MySQL, and JavaScript, developed as part of my early backend learning phase.
       </p>
@@ -281,18 +274,18 @@ export const projects = [
           </p>
         </div>
       </div>`,
-    stack: ["JavaScript / jQuery", "PHP", "OOP", "MVC Architecture", "MySQL", "AJAX", "Bootstrap 4"],
-    image: "/images/projects/skoda.png",
-    github: "https://github.com/MarkoG111/skoda_rental",
-    demo: "https://skoda-rental.infinityfree.me/",
-    reverse: false,
-    hoverOffset: 60
-  },
-  {
-    id: 5,
-    title: "Gigatronic Shop",
-    date: "March 2020",
-    description: `
+        stack: ["JavaScript / jQuery", "PHP", "OOP", "MVC Architecture", "MySQL", "AJAX", "Bootstrap 4"],
+        image: "/images/projects/skoda.png",
+        github: "https://github.com/MarkoG111/skoda_rental",
+        demo: "https://skoda-rental.infinityfree.me/",
+        reverse: false,
+        hoverOffset: 60
+    },
+    {
+        id: 5,
+        title: "Gigatronic Shop",
+        date: "March 2020",
+        description: `
       <p class="mb-2">
         E-commerce web application built with <strong>PHP</strong> and <strong>MySQL</strong>, focused on dynamic content and core shopping features.
       </p>
@@ -302,7 +295,7 @@ export const projects = [
         <li>User authentication and session management</li>
         <li>Admin dashboard with orders, polls, users and products</li>
       </ul>`,
-    details: `
+        details: `
       <p class="mb-3">
         Gigatronic Shop is a full-stack e-commerce application built using PHP, MySQL, and JavaScript, developed as one of my first larger backend-driven projects.
       </p>
@@ -355,18 +348,18 @@ export const projects = [
           </p>
         </div>
       </div>`,
-    stack: ["JavaScript / jQuery", "PHP", "MySQL", "AJAX", "Bootstrap 4"],
-    image: "/images/projects/gigatronic-shop.png",
-    github: "https://github.com/MarkoG111/gigatronic_shop",
-    demo: "https://gigatronic-shop.infinityfree.me/",
-    reverse: true,
-    hoverOffset: 60
-  },
-  {
-    id: 6,
-    title: "Gornji Milanovac",
-    date: "February 2019",
-    description: `
+        stack: ["JavaScript / jQuery", "PHP", "MySQL", "AJAX", "Bootstrap 4"],
+        image: "/images/projects/gigatronic-shop.png",
+        github: "https://github.com/MarkoG111/gigatronic_shop",
+        demo: "https://gigatronic-shop.infinityfree.me/",
+        reverse: true,
+        hoverOffset: 60
+    },
+    {
+        id: 6,
+        title: "Gornji Milanovac",
+        date: "February 2019",
+        description: `
       <p class="mb-2">
         Responsive single-page website built with <strong>JavaScript</strong> and <strong>jQuery</strong>, focused on dynamic UI and data rendering.
       </p>
@@ -376,7 +369,7 @@ export const projects = [
         <li>Interactive UI (modals, accordion, animations)</li>
         <li>Form validation with regex and LocalStorage</li>
       </ul>`,
-    details: `
+        details: `
       <p class="mb-3">
         Gornji Milanovac is a responsive single-page web application built using HTML, CSS, JavaScript, and jQuery, developed as one of my earliest projects focused on dynamic frontend behavior.
       </p>
@@ -426,18 +419,18 @@ export const projects = [
           </p>
         </div>
       </div>`,
-    stack: ["JavaScript / jQuery", "AJAX", "JSON"],
-    image: "/images/projects/township-gornji-milanovac.png",
-    github: "https://github.com/MarkoG111/gornji_milanovac",
-    demo: "https://gornjimilanovac.vercel.app/",
-    reverse: false,
-    hoverOffset: 50
-  },
-  {
-    id: 7,
-    title: "K2 Elite",
-    date: "March 2018",
-    description: `
+        stack: ["JavaScript / jQuery", "AJAX", "JSON"],
+        image: "/images/projects/township-gornji-milanovac.png",
+        github: "https://github.com/MarkoG111/gornji_milanovac",
+        demo: "https://gornjimilanovac.vercel.app/",
+        reverse: false,
+        hoverOffset: 50
+    },
+    {
+        id: 7,
+        title: "K2 Elite",
+        date: "March 2018",
+        description: `
       <p class="mb-2">
         Static website built using <strong>HTML</strong> and <strong>CSS</strong>, focused on learning core web fundamentals.
       </p>
@@ -447,7 +440,7 @@ export const projects = [
         <li>Image galleries and basic UI components</li>
         <li>SEO basics (meta tags, sitemap, RSS)</li>
       </ul>`,
-    details: `
+        details: `
       <p class="mb-3">
         K2 Elite is my first web project, built entirely using HTML and CSS, without any JavaScript or frameworks.
       </p>
@@ -494,11 +487,11 @@ export const projects = [
           </p>
         </div>
       </div>`,
-    stack: ["HTML", "CSS", "SEO"],
-    image: "/images/projects/k2-elite.png",
-    github: "https://github.com/MarkoG111/k2_elite",
-    demo: "https://k2elite.vercel.app/",
-    reverse: true,
-    hoverOffset: 40
-  }
+        stack: ["HTML", "CSS", "SEO"],
+        image: "/images/projects/k2-elite.png",
+        github: "https://github.com/MarkoG111/k2_elite",
+        demo: "https://k2elite.vercel.app/",
+        reverse: true,
+        hoverOffset: 40
+    }
 ];
