@@ -212,7 +212,7 @@ export const projects = [
         date: "July 2020",
         description: `
       <p class="mb-2">
-        Car rental web application built with <strong>OOP PHP</strong> following the <strong>MVC</strong> architectural pattern with a <strong>Front Controller</strong> entry point, focused on dynamic data handling and user interaction.
+        Car rental web application built with <strong>OOP PHP</strong> following the <strong>MVC</strong> architectural pattern with a <strong>Front Controller</strong> entry point,  covering the complete flow from user registration to booking confirmation and admin management.
       </p>
       <ul class="list-disc ml-5 space-y-1">
         <li>AJAX filtering with pagination (no page reload)</li>
@@ -274,7 +274,7 @@ export const projects = [
           </p>
         </div>
       </div>`,
-        stack: ["JavaScript / jQuery", "PHP", "OOP", "MVC Architecture", "MySQL", "AJAX", "Bootstrap 4"],
+        stack: ["JavaScript / jQuery", "PHP", "OOP", "MySQL", "AJAX", "Bootstrap 4"],
         image: "/images/projects/skoda.png",
         github: "https://github.com/MarkoG111/skoda_rental",
         demo: "https://skoda-rental.infinityfree.me/",
