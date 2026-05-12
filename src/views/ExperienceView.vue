@@ -58,7 +58,7 @@
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Gameplay Features Implementation:</span>
-                                        Implemented and stabilized complex slot mechanics including Switching Stacks (reel swapping), Sticky Wilds, Free Spins logic, and respin systems, ensuring correct mapping of backend feature data to frontend presentation and animations.
+                                        Implemented and maintained advanced slot gameplay mechanics across multiple games, including Sticky Wilds, Swap Wolves symbol transformations, Free Spins lifecycles, Extended Wild systems, and animated feature interactions. Mapped server-driven feature data into frontend game state, coordinated PIXI.js/Spine/GSAP animation flows, and handled persistent gameplay states across respins and bonus features.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
@@ -68,7 +68,7 @@
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Production Stability & Debugging:</span>
-                                        Resolved complex production issues including race conditions in spin requests, duplicate API calls, broken Promise chains, autoplay inconsistencies, and animation timing conflicts, significantly improving gameplay stability.
+                                        Resolved production issues including race conditions in spin requests, duplicate API calls, broken Promise chains, autoplay inconsistencies, and animation timing conflicts, significantly improving gameplay stability.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
