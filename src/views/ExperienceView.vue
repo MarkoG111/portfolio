@@ -98,7 +98,7 @@
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Pantheon Integration:</span> Built backend-driven invoice synchronization with Pantheon accounting API, transforming internal invoice data into structured payloads with line items, tax logic, and multi-method payments. Implemented mapping layers for payment types and tax codes, and ensured accurate financial data transfer through validation and error handling mechanisms.
+                                        <span class="font-semibold text-red">Pantheon Integration:</span> Built backend integration with Pantheon e-fiscalization API to meet Montenegro's legal fiscalization requirements, transforming internal invoice data into structured payloads with line items, tax codes, and multi-method payment mapping (cash, card, wire transfer). Implemented discount normalization (fixed-to-percent conversion), per-line cost calculation, and external ID tracking in a dedicated reconciliation table. Errors in fiscalization have direct legal consequences, which drove stricter validation and error handling compared to standard API integrations.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
@@ -112,11 +112,11 @@
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
                                         <span class="font-semibold text-red">Automated Emails:</span>
-                                        Built a rule-based email system for guest communication, supporting configurable templates with dynamic placeholder substitution, event-based scheduling (before/after arrival or departure), and filtering by channel and room. Implemented backend-driven delivery via external APIs, enabling automated, targeted communication workflows.
+                                        Built a multi-flow automated email system handling three distinct delivery paths: transactional owner notifications on every reservation event (with full financial breakdown and per-user room-type filtering), configurable guest emails with dynamic placeholder substitution and conditional cancel/confirm/offer links, and a cron-driven template engine with event-based scheduling (before/after arrival, departure, or receipt), filtering by channel, room type, and guest country. Integrated InfoBip for reliable transactional delivery and implemented multilingual support through batch translation lookups.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Expenses Module:</span> Designed and implemented a full expense management module supporting manual and recurring entries (daily, monthly, yearly), with cron-based automation and duplicate prevention. Modeled relationships across properties, room types, and individual rooms, enabling granular cost allocation. Built reporting and export functionality (PDF/Excel) to support financial analysis and operational tracking.
+                                        <span class="font-semibold text-red">Expenses Module:</span> Designed and implemented a full expense management module supporting manual and recurring entries with three cost allocation models — by property, by room type, and distributed across individual rooms. Built a cron-driven automation layer that evaluates template eligibility at runtime, calculates per-room cost splits, and tracks repetition counters to enforce configured limits. Modeled relationships across five tables (templates, expenses, rooms, room types, attachments) with soft-delete and full audit trail. Built reporting with dynamic SQL filters and Excel export via PhpSpreadsheet, consumed both interactively and through automated email reports.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
