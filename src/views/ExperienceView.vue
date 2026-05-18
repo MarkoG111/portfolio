@@ -68,7 +68,7 @@
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Production Stability & Debugging:</span>
-                                        Resolved production issues including race conditions in spin requests, duplicate API calls, broken Promise chains, autoplay inconsistencies, and animation timing conflicts, significantly improving gameplay stability.
+                                        Resolved production issues including race conditions in spin requests, duplicate API calls, broken Promise chains, autoplay inconsistencies, and animation timing conflicts.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
@@ -94,7 +94,7 @@
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
-                                        <span class="font-semibold text-red">Minimax Integration:</span> Owned the end-to-end integration with Minimax ERP, designing an adapter layer to translate complex internal invoice models into external API schemas. Implemented OAuth2 token management, automated invoice synchronization, and external ID tracking for reconciliation. Handled edge cases such as partial failures and retry scenarios to ensure consistency between systems, effectively replacing manual double-entry accounting workflows.
+                                        <span class="font-semibold text-red">Minimax ERP Integration:</span> Built a backend adapter layer in PHP that translates internal invoice data into the Minimax REST API schema, automating invoice synchronization between the OTA Sync platform and external accounting software. Implemented OAuth2 authentication with token management, external ID tracking for reconciliation, and error handling for failed API calls. Replaced a previously manual bookkeeping process, eliminating double-entry data work for accounting teams.
                                     </li>
 
                                     <li class="p-1 rounded-lg shadow-sm border border-gray-100">
