@@ -41,39 +41,39 @@
                         <div class="md:text-xl xs:text-l" v-if="selectedTitle == 'Frontmen Studio'">
                             <div>
                                 <p class="leading-[1.8] space-y-4 mt-3">
-                                    Worked on browser-based casino slot games within a modular, config-driven game engine, handling real-time game state, animation synchronization, and server-driven outcomes.
+                                    Built and maintained frontend systems for browser-based casino slot games on the Leander Games platform, a config-driven engine powering <span class="font-semibold">8+ titles</span> simultaneously, each with distinct mechanics, visual themes, and regulated market requirements.
                                 </p>
                             </div>
                             <div>
                                 <ul class="list-disc ml-5 mt-4 space-y-3 leading-[1.7]">
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Game Flow & State Management:</span>
-                                        Owned the full frontend game loop, from user input handling to processing server outcomes and rendering results. Managed real-time game state, synchronized UI, animations, and backend responses to ensure consistent gameplay flow across spins, wins, and feature triggers.
+                                        Owned the complete frontend game loop across multiple titles: from user input and spin initiation through HTTP communication with the Leander server, outcome processing, game model updates, and final UI cleanup. Implemented race condition guards (spinInProgress flag, disableInterface/enableInterface pattern) to prevent duplicate spin requests and ensure consistent state across the full async sequence. Managed feature lifecycle transitions (Free Spins, Respins, bonus rounds) as distinct state machines within the main spin flow.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Config-Driven Game Engine:</span>
-                                        Worked within a modular, config-driven architecture where layouts, animations, and UI behavior were defined via JSON/PHP configurations, enabling rapid game reskinning and feature reuse without modifying core engine logic.
+                                        Developed and extended a modular engine where game layouts, animations, UI logic, and component behavior were defined through PHP-generated JSON configurations. Implemented dynamic @reference bindings that evaluated live game state at runtime (@game, @iface, @slot), a named layer system for deterministic render ordering, and Portrait/Landscape override resolution, enabling new game variants to be shipped by modifying configuration rather than engine code.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Gameplay Features Implementation:</span>
-                                        Implemented and maintained advanced slot gameplay mechanics across multiple games, including Sticky Wilds, Swap Wolves symbol transformations, Free Spins lifecycles, Extended Wild systems, and animated feature interactions. Mapped server-driven feature data into frontend game state, coordinated PIXI.js/Spine/GSAP animation flows, and handled persistent gameplay states across respins and bonus features.
+                                        Implemented advanced slot mechanics across 8+ games, including Sticky Wilds with persistent state across respins, Swap Wolves symbol transformations with sequential audio sync, Free Spins lifecycles, Mystery symbol reveal systems, Cascade wins with growing multipliers, and Jackpot tiers. Mapped server-driven feature data (positions, flags, feature objects) into frontend game state via the Communication Service, then coordinated GSAP timelines, Pixi.js rendering, and Spine skeletal animations into synchronized visual sequences.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Animation & Rendering Synchronization:</span>
-                                        Coordinated high-performance animations using GSAP timelines and Pixi.js rendering, synchronizing reels, win-line highlights, and audio with backend-driven outcomes in real time.
+                                        Coordinated multi-layer animation sequences using GSAP TimelineMax and Pixi.js (WebGL), synchronizing reel spin/stop, symbol landing animations, win-line highlights, Big Win countups, and Spine character animations, all driven by Promise chains that guaranteed correct execution order. Integrated Howler audio at precise timeline positions to match sound events with visual triggers (scatter lands, anticipation builts, win celebrations).
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
                                         <span class="font-semibold text-red">Production Stability & Debugging:</span>
-                                        Resolved production issues including race conditions in spin requests, duplicate API calls, broken Promise chains, autoplay inconsistencies, and animation timing conflicts.
+                                        Diagnosed and resolved production issues including double-spin race conditions from rapid user input or autoplay misfires, broken Promise chains causing premature UI unlock or overlapping animations, early reel stop desynchronization between user input timing and server response timing, and autoplay compliance failures on regulated markets (UK, DE, NL). Used browser devtools, conditional breakpoints, and timestamp logging within Promise chains to isolate async timing issues.
                                     </li>
 
                                     <li class="p-2 rounded-lg border border-gray-100">
-                                        <span class="font-semibold text-red">Backend Integration Layer:</span>
-                                        Worked on communication layer mapping server responses into frontend game models, ensuring correct rendering of symbols, win states, and feature triggers across different game scenarios.
+                                        <span class="font-semibold text-red">Backend Integration & Regulated Markets:</span>
+                                        Maintained the Communication Service layer responsible for mapping raw Leander server responses into typed frontend outcome objects: symbols per reel, win lines, feature flags, scatter counts, anticipation data. Applied market-specific compliance rules across the full game flow for UK, DE, NL, and Ontario markets, including small win suppression (no animation/audio when win ≤ bet), autoplay restrictions, and conditional UI behavior driven by checkRegulatedMarket() checks.
                                     </li>
                                 </ul>
                             </div>
