@@ -11,37 +11,23 @@
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    I'm a full-stack developer with close to 3 years of production experience,
-                    focused on backend integrations, automated workflows, and systems that hold
-                    up under real load.
+                    I'm a full-stack developer with 3 years of production experience, building backend integrations, automated workflows, and game systems that run under real load.
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    At <strong>OTA Sync</strong>, I worked on a cloud-based Property Management
-                    System used by <strong>5,000+ users across 40+ markets</strong> building
-                    integrations with OpenGDS, PriceLabs and Minimax, developing automated
-                    email and reporting systems, and cutting client onboarding time by
-                    <strong>60%</strong> through Airbnb and Booking.com data importers.
+                    At <strong>OTA Sync</strong>, I worked on a cloud-based Property Management System used by <strong>5,000+ users</strong> across <strong>40+ markets</strong> building integrations with OpenGDS, PriceLabs, and Minimax, developing automated email and reporting pipelines, and cutting client onboarding time by 60% through Airbnb and Booking.com data importers.
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    Before that, at <strong>Frontmen Studio</strong>, I worked on browser-based
-                    casino slot games owning the full frontend game layer from server spin
-                    outcomes to reels render, win animations and audio sync. I resolved
-                    production-level bugs like race conditions, broken Promise chains and
-                    animation layering conflicts across regulated markets (DE, ES, UK).
+                    At <strong>Frontmen Studio</strong>, I owned the full frontend game loop for browser-based casino slot games on the Leander platform: processing server spin outcomes, coordinating GSAP/Pixi.js/Spine animation sequences, and resolving production issues including race conditions, broken Promise chains, and compliance requirements across UK, DE, and NL regulated markets.
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    Outside of work, I build my own projects, a real-time blog platform with
-                    SignalR and CQRS, an e-learning platform with Stripe payment flows, and a
-                    custom event ticketing system with QR-based fraud prevention and
-                    transactional seat locking.
+                    Outside of work I build my own projects: a real-time blog platform using SignalR and CQRS, an e-learning platform with Stripe payment flows, and a custom event ticketing system with QR-based fraud prevention and transactional seat locking.
                 </p>
 
                 <p class="md:text-xl py-4 leading-relaxed max-w-4xl">
-                    My focus is on building things that actually work in production: reliable,
-                    maintainable, and built to solve real business problems.
+                    I'm currently looking for full-stack, backend, or frontend positions where there's room to grow, ideally somewhere with real integrations, solid codebase, and problems worth solving.
                 </p>
                 <p class="md:text-xl py-4">
                     <a href="/cv/Marko_Gacanovic_Fullstack.pdf" download
